@@ -1,0 +1,8 @@
+format: jb-article
+root: README
+sections:
+- file: notebooks/Index
+- file: notebooks/01-Single-Track
+- file: notebooks/02-Track-Alignment-and-Data-Loading
+- file: notebooks/03-Semantic-Zooming
+- file: notebooks/04-Coordinated-Multiple-Views
