@@ -1,0 +1,2866 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Session 1: Single Track &#8212; Gos Tutorial</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Session 2: Track Alignment and Data Loading" href="02-Track-Alignment-and-Data-Loading.html" />
+    <link rel="prev" title="Outline" href="Index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/favicon.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Gos Tutorial</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Genomics Data Visualization with Gos
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Index.html">
+   Outline
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Session 1: Single Track
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-Track-Alignment-and-Data-Loading.html">
+   Session 2: Track Alignment and Data Loading
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-Semantic-Zooming.html">
+   Session 3: Semantic Zooming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-Coordinated-Multiple-Views.html">
+   Session 4: Coordinated Multiple Views
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/gosling-lang/gos-tutorial/master?urlpath=tree/notebooks/01-Single-Track.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/01-Single-Track.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Session 1: Single Track
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-gos">
+   What is
+   <strong>
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      gos
+     </span>
+    </code>
+   </strong>
+   🦆?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation">
+     Motivation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overview">
+     Overview
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-it-works">
+     How it works
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting started
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#track-fundamentals">
+     Track fundamentals
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-types">
+     Data-types
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-encodings">
+     Multiple encodings
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-simplified-ideogram">
+     Example: Simplified ideogram
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#track-reuse-and-composition">
+   Track reuse and composition
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-data">
+     The data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overlay-track">
+     Overlay track
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#track-function">
+     Track function
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Session 1: Single Track</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Session 1: Single Track
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-gos">
+   What is
+   <strong>
+    <code class="docutils literal notranslate">
+     <span class="pre">
+      gos
+     </span>
+    </code>
+   </strong>
+   🦆?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#motivation">
+     Motivation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overview">
+     Overview
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-it-works">
+     How it works
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting started
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#track-fundamentals">
+     Track fundamentals
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-types">
+     Data-types
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-encodings">
+     Multiple encodings
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-simplified-ideogram">
+     Example: Simplified ideogram
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#track-reuse-and-composition">
+   Track reuse and composition
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-data">
+     The data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overlay-track">
+     Overlay track
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#track-function">
+     Track function
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="session-1-single-track">
+<h1>Session 1: Single Track<a class="headerlink" href="#session-1-single-track" title="Permalink to this headline">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="what-is-gos">
+<h1>What is <strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong> 🦆?<a class="headerlink" href="#what-is-gos" title="Permalink to this headline">#</a></h1>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h2>
+<p>So far in the tutorial we have provided a general overview of the Gosling  visualization grammar and introduced its key features:</p>
+<ul class="simple">
+<li><p><em>Expressiveness</em></p></li>
+<li><p><em>Data scalability</em></p></li>
+<li><p><em>Encoding scalability</em></p></li>
+<li><p><em>Coordinated interactivity</em></p></li>
+</ul>
+<p>Although Gosling is extremely flexible, its JSON represenation is less ergonomic to construct natively via popular programming languages (like Python) and deploying a Gosling-based visualization requires the administration of a web server. Together these challenges serve as a barrier to entry for some, and we were motivated to design a simplified API <em>for</em> computational biologists to visualize their own datasets with Gosling.</p>
+<p>Enter <strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong>…</p>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong> is a declarative <strong>Python library</strong> designed to create interactive multi-scale visualizations of genomics and epigenomics data. Its main features include:</p>
+<ul class="simple">
+<li><p>Authoring declarative genomics visualizations which adhere to the <a class="reference external" href="http://gosling-lang.org/">Gosling</a> JSON Specification</p></li>
+<li><p>Displaying Gosling visualizations directly in computational notebooks (Jupyter, JupyterLab, Google Colab)</p></li>
+<li><p>Transparently hosting genomics datasets for visualizations (hiding web server complexities)</p></li>
+</ul>
+<br>
+<p align="center">
+  <img width="600" src="https://user-images.githubusercontent.com/24403730/176062140-596b3a74-168f-4b86-8047-85785ee06179.png" />
+</p></section>
+<section id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">#</a></h2>
+<p>The <strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong> Python library exposes a simple API that maps directly to the formal Gosling JSON specification. Users write Python programs with <strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong> which ultimately:</p>
+<ul class="simple">
+<li><p>Emit JSON (the Gosling visualization)</p></li>
+<li><p>Automatically render said JSON within computational notebooks</p></li>
+</ul>
+<p align="center">
+  <img width="600" src="https://pbs.twimg.com/media/FCT0BntX0AEEcDH?format=jpg&name=4096x4096" />
+</p>
+<blockquote>
+<div><p><strong>Note</strong> You need not understand the low-level details of <strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong>. The important thing to keep in mind is that <strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong> (by design) is <em>gaurenteed</em> to be consistent with the formal Gosling grammar, and therefore learning <strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong> will teach Gosling and vis versa.</p>
+</div></blockquote>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">#</a></h1>
+<p>The remainder of this notebook will focus on introducing the Gosling grammar through the declarative Python API.</p>
+<p>Start by importing <code class="docutils literal notranslate"><span class="pre">gosling</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install <span class="nv">gosling</span><span class="o">==</span><span class="m">0</span>.0.8
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gosling==0.0.8 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (0.0.8)
+Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.8) (3.1.2)
+Requirement already satisfied: jsonschema&lt;4.0,&gt;=3.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.8) (3.2.0)
+Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.8) (1.4.3)
+Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.8) (58.1.0)
+Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.8) (21.4.0)
+Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.8) (1.16.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.8) (0.18.1)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jinja2-&gt;gosling==0.0.8) (2.1.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.8) (2022.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.8) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.8) (1.23.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p><strong>Note</strong> it is a convention to import as <code class="docutils literal notranslate"><span class="pre">gos</span></code> and then access the API through this namespace.</p>
+</div></blockquote>
+<section id="track-fundamentals">
+<h2>Track fundamentals<a class="headerlink" href="#track-fundamentals" title="Permalink to this headline">#</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong> exposes two fundamental building-blocks for genomics visualizations:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gos.Track</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gos.View</span></code></p></li>
+</ul>
+<p>A <em>Track</em> is the core component of a genomics visualization that defines explict <strong>transformations</strong> and <strong>mappings</strong> of genomics data to <strong>visual properties</strong>. A <em>Track</em> may be composed with other <em>Tracks</em> or <strong>grouped</strong> into a <em>View</em> that share the same linked genomic domain.</p>
+<p>The figure below depicts the heirarchical structure of a Gosling visualization, displaying <strong>3</strong> distict <em>Views</em> (light orange/blue/green) which individually are composed of several <em>Tracks</em>.</p>
+<img src="https://github.com/gosling-lang/gos-example/blob/main/notebooks/tracks-views.jpeg?raw=1" width="600">
+<p>A <em>Track</em> (dark orange/blue/green) is the base primative for building genomics visualizations and requires binding a data source. In <code class="docutils literal notranslate"><span class="pre">gos</span></code> we define an abstract genomic data source and bind it to a <em>Track</em> directly through the Python API.</p>
+<p>We will start by loading a BED file containing UCSC hg38 cytoband information</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>curl -s <span class="o">{</span>data_url<span class="o">}</span> <span class="p">|</span> head <span class="p">|</span> column -t
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chr1  0         2300000   p36.33  gneg
+chr1  2300000   5300000   p36.32  gpos25
+chr1  5300000   7100000   p36.31  gneg
+chr1  7100000   9100000   p36.23  gpos25
+chr1  9100000   12500000  p36.22  gneg
+chr1  12500000  15900000  p36.21  gpos50
+chr1  15900000  20100000  p36.13  gneg
+chr1  20100000  23600000  p36.12  gpos25
+chr1  23600000  27600000  p36.11  gneg
+chr1  27600000  29900000  p35.3   gpos25
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The dataset is a BED4+1 file which can be read in Gosling as the CSV datatype</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="n">data_url</span><span class="p">,</span>
+    <span class="n">headerNames</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chrom&#39;</span><span class="p">,</span> <span class="s1">&#39;chromStart&#39;</span><span class="p">,</span> <span class="s1">&#39;chromEnd&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;stain&#39;</span><span class="p">],</span> <span class="c1"># the +1 field is stain</span>
+    <span class="n">chromosomeField</span><span class="o">=</span><span class="s2">&quot;chrom&quot;</span><span class="p">,</span> <span class="c1"># the column containing chrom names</span>
+    <span class="n">genomicFields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;chromStart&quot;</span><span class="p">,</span> <span class="s2">&quot;chromEnd&quot;</span><span class="p">],</span> <span class="c1"># fields with genomic coordinates</span>
+    <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># bind the data to a track</span>
+<span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Track({
+  data: {&#39;type&#39;: &#39;csv&#39;, &#39;url&#39;: &#39;https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed&#39;, &#39;headerNames&#39;: [&#39;chrom&#39;, &#39;chromStart&#39;, &#39;chromEnd&#39;, &#39;name&#39;, &#39;stain&#39;], &#39;chromosomeField&#39;: &#39;chrom&#39;, &#39;genomicFields&#39;: [&#39;chromStart&#39;, &#39;chromEnd&#39;], &#39;separator&#39;: &#39;\t&#39;},
+  height: 180,
+  mark: &#39;bar&#39;,
+  width: 800
+})
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <em>Track</em> above is now bound to the genomics data, but the Gosling grammar requires the root of every visualization as a <em>View</em>, which may contain one or more <em>Tracks</em>.</p>
+<p>In order to complete a Gosling specification for the track in isolation, we use the <code class="docutils literal notranslate"><span class="pre">gos.Track.view()</span></code> method to cast the track within a <code class="docutils literal notranslate"><span class="pre">gos.View</span></code>. In Jupyter or Google Colab, the visualization is automatically rendered in the cell below rather than printing a Python object like above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">track</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># create `gos.Track`</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">track</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>     <span class="c1"># cast to `gos.View`</span>
+<span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-d05694f10975420ea02ebbe349326d9c"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-d05694f10975420ea02ebbe349326d9c');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "bar", "width": 800}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<p><em>Something</em> appeared on the screen but our visualization looks empty. What’s going on? We haven’t declared how to map the dataset to any visual properties!</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">gos.Track.mark_*()</span></code> and <code class="docutils literal notranslate"><span class="pre">gos.Track.encode()</span></code> methods to specify a <strong>mark</strong> and what <strong>visual encodings</strong> to apply.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># explore available marks with `gos.Track(data).mark_*`</span>
+<span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;genomic&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;chromStart&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;genomic&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-b5b1347ec8164daebf212deeb4e85e34"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-b5b1347ec8164daebf212deeb4e85e34');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"axis": "left", "field": "chromStart", "type": "genomic"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;genomic&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;chromStart&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;genomic&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">),</span> <span class="c1"># add y-encoding</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-cec3da9b05434fa8b9af55ab67a51dd1"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-cec3da9b05434fa8b9af55ab67a51dd1');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"axis": "left", "field": "chromStart", "type": "genomic"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<p>You can read more about the specific visual channels which are supported by each mark type in the <a class="reference external" href="http://gosling-lang.org/docs/visual-channel">Gosling documentation</a>.</p>
+</section>
+<section id="data-types">
+<h2>Data-types<a class="headerlink" href="#data-types" title="Permalink to this headline">#</a></h2>
+<p>The specifics of an encoding depend on the type of the data. Gosling recognizes three datatypes:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Type</p></th>
+<th class="head"><p>Shorthand Code</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>quantitative</p></td>
+<td><p>Q</p></td>
+<td><p>a continuous real-valued quantity</p></td>
+</tr>
+<tr class="row-odd"><td><p>nominal</p></td>
+<td><p>N</p></td>
+<td><p>a discrete unordered category</p></td>
+</tr>
+<tr class="row-even"><td><p>genomic</p></td>
+<td><p>G</p></td>
+<td><p>a genomic base-pair position</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data types can either be expressed in long-form like above, or a short-hand syntax can be used to remove boilerplate when exploring visual encodings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart:G&quot;</span><span class="p">),</span> <span class="c1"># `gos.X(&quot;chromStart:G&quot;)` also ok and useful to further refine encoding</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;strain:N&quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-a0d201fe1a0e48b5b52830917b1f31ba"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-a0d201fe1a0e48b5b52830917b1f31ba');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "strain", "type": "nominal"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart:G&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;chromStart:Q&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">),</span> <span class="c1"># change y-encoding to quantitative</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-c7c1d723e68144d7b867c306789a1455"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-c7c1d723e68144d7b867c306789a1455');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"axis": "left", "field": "chromStart", "type": "quantitative"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart:G&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;stain:N&quot;</span><span class="p">)</span> <span class="c1"># change y-encoding to nominal field</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-0a8496ed5e9b40bcb17d877306f86a99"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-0a8496ed5e9b40bcb17d877306f86a99');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart:G&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;stain:N&quot;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">),</span> <span class="c1"># no data-type, just a literal value!</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-a92ca4df3cbc46f49ed98515025cfa03"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-a92ca4df3cbc46f49ed98515025cfa03');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "color": {"value": "black"}, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+</section>
+<section id="multiple-encodings">
+<h2>Multiple encodings<a class="headerlink" href="#multiple-encodings" title="Permalink to this headline">#</a></h2>
+<p>We can use both <code class="docutils literal notranslate"><span class="pre">y</span></code> position and <code class="docutils literal notranslate"><span class="pre">color</span></code> to encoding the same field.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart:G&quot;</span><span class="p">),</span>
+    <span class="n">xe</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Xe</span><span class="p">(</span><span class="s2">&quot;chromEnd:G&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;stain:N&quot;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-92d31b2d0c064e9f8149d808b7c2e012"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-92d31b2d0c064e9f8149d808b7c2e012');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "rect", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart:G&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;stain:N&quot;</span><span class="p">),</span>
+    <span class="c1"># custom colormapping</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span>
+        <span class="s2">&quot;stain:N&quot;</span><span class="p">,</span> 
+        <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;gneg&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos25&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos50&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos75&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos100&quot;</span><span class="p">,</span> <span class="s2">&quot;gvar&quot;</span><span class="p">],</span>
+        <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;#D9D9D9&quot;</span><span class="p">,</span> <span class="s2">&quot;#979797&quot;</span><span class="p">,</span> <span class="s2">&quot;#636363&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;#A0A0F2&quot;</span><span class="p">],</span>
+        <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-dcf3ab70c27043efa97fd4b167b6bb78"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-dcf3ab70c27043efa97fd4b167b6bb78');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "legend": true, "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># change mark and add text-encoding</span>
+<span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_text</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart:G&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;stain:N&quot;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span>
+        <span class="s2">&quot;stain:N&quot;</span><span class="p">,</span> 
+        <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;gneg&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos25&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos50&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos75&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos100&quot;</span><span class="p">,</span> <span class="s2">&quot;gvar&quot;</span><span class="p">],</span>
+        <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;#D9D9D9&quot;</span><span class="p">,</span> <span class="s2">&quot;#979797&quot;</span><span class="p">,</span> <span class="s2">&quot;#636363&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;#A0A0F2&quot;</span><span class="p">],</span>
+        <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">text</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;stain:N&quot;</span><span class="p">)</span> 
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-ea2482aa526e4a5ba359b82977c784f0"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-ea2482aa526e4a5ba359b82977c784f0');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "text", "width": 800, "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "legend": true, "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "text": {"field": "stain", "type": "nominal"}, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+</section>
+<section id="example-simplified-ideogram">
+<h2>Example: Simplified ideogram<a class="headerlink" href="#example-simplified-ideogram" title="Permalink to this headline">#</a></h2>
+<p>We can create a simplified ideogram using the concepts from above by changing the <code class="docutils literal notranslate"><span class="pre">mark</span></code> for our track and specifying additional encodings.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">track</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="c1"># defines start and end of rectangle mark</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;chromStart:G&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">),</span>
+    <span class="n">xe</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Xe</span><span class="p">(</span><span class="s2">&quot;chromEnd:G&quot;</span><span class="p">),</span>
+    <span class="c1"># defines how to map Giemsa-stain factor to colors</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span>
+        <span class="s2">&quot;stain:N&quot;</span><span class="p">,</span> 
+        <span class="n">domain</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;gneg&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos25&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos50&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos75&quot;</span><span class="p">,</span> <span class="s2">&quot;gpos100&quot;</span><span class="p">,</span> <span class="s2">&quot;gvar&quot;</span><span class="p">],</span>
+        <span class="nb">range</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="s2">&quot;#D9D9D9&quot;</span><span class="p">,</span> <span class="s2">&quot;#979797&quot;</span><span class="p">,</span> <span class="s2">&quot;#636363&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="s2">&quot;#A0A0F2&quot;</span><span class="p">]</span>
+    <span class="p">),</span>
+    <span class="c1"># customize the style of the visual marks. </span>
+    <span class="n">size</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+    <span class="n">stroke</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;gray&quot;</span><span class="p">),</span>
+    <span class="n">strokeWidth</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">track</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-d35756d81ad04c6f87b5ae68395cbf51"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-d35756d81ad04c6f87b5ae68395cbf51');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "rect", "width": 800, "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<p>Additional parameters for the resulting <code class="docutils literal notranslate"><span class="pre">gos.View</span></code> can be passed in as well for convenience. We can easily set a <code class="docutils literal notranslate"><span class="pre">title</span></code> and <code class="docutils literal notranslate"><span class="pre">xDomain</span></code> for our visualization, initializing the initial genomic region to display human chromsome 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">track</span><span class="o">.</span><span class="n">view</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Gos is awesome!&quot;</span><span class="p">,</span>
+    <span class="n">xDomain</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">GenomicDomain</span><span class="p">(</span><span class="n">chromosome</span><span class="o">=</span><span class="s2">&quot;chr1&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-b60f8fe73c8645b3be8d1f57da238b0a"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-b60f8fe73c8645b3be8d1f57da238b0a');
+    var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "rect", "width": 800, "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "title": "Gos is awesome!", "xDomain": {"chromosome": "chr1"}};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">track</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+<span class="n">view</span><span class="o">.</span><span class="n">to_json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;{\n  &quot;tracks&quot;: [\n    {\n      &quot;color&quot;: {\n        &quot;domain&quot;: [\n          &quot;gneg&quot;,\n          &quot;gpos25&quot;,\n          &quot;gpos50&quot;,\n          &quot;gpos75&quot;,\n          &quot;gpos100&quot;,\n          &quot;gvar&quot;\n        ],\n        &quot;field&quot;: &quot;stain&quot;,\n        &quot;range&quot;: [\n          &quot;white&quot;,\n          &quot;#D9D9D9&quot;,\n          &quot;#979797&quot;,\n          &quot;#636363&quot;,\n          &quot;black&quot;,\n          &quot;#A0A0F2&quot;\n        ],\n        &quot;type&quot;: &quot;nominal&quot;\n      },\n      &quot;data&quot;: {\n        &quot;chromosomeField&quot;: &quot;chrom&quot;,\n        &quot;genomicFields&quot;: [\n          &quot;chromStart&quot;,\n          &quot;chromEnd&quot;\n        ],\n        &quot;headerNames&quot;: [\n          &quot;chrom&quot;,\n          &quot;chromStart&quot;,\n          &quot;chromEnd&quot;,\n          &quot;name&quot;,\n          &quot;stain&quot;\n        ],\n        &quot;separator&quot;: &quot;\\t&quot;,\n        &quot;type&quot;: &quot;csv&quot;,\n        &quot;url&quot;: &quot;https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed&quot;\n      },\n      &quot;height&quot;: 180,\n      &quot;mark&quot;: &quot;rect&quot;,\n      &quot;size&quot;: {\n        &quot;value&quot;: 20\n      },\n      &quot;stroke&quot;: {\n        &quot;value&quot;: &quot;gray&quot;\n      },\n      &quot;strokeWidth&quot;: {\n        &quot;value&quot;: 0.5\n      },\n      &quot;width&quot;: 800,\n      &quot;x&quot;: {\n        &quot;axis&quot;: &quot;top&quot;,\n        &quot;field&quot;: &quot;chromStart&quot;,\n        &quot;type&quot;: &quot;genomic&quot;\n      },\n      &quot;xe&quot;: {\n        &quot;field&quot;: &quot;chromEnd&quot;,\n        &quot;type&quot;: &quot;genomic&quot;\n      }\n    }\n  ]\n}&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="track-reuse-and-composition">
+<h1>Track reuse and composition<a class="headerlink" href="#track-reuse-and-composition" title="Permalink to this headline">#</a></h1>
+<p>This section demonstrates how to build more complex, layered tracks and write functions to reuse visualizations for other data sources.</p>
+<p>A common pattern in <strong><code class="docutils literal notranslate"><span class="pre">gos</span></code></strong> is the reuse of <code class="docutils literal notranslate"><span class="pre">gos.Track</span></code> instances to create new, modified <code class="docutils literal notranslate"><span class="pre">gos.Track</span></code> or <code class="docutils literal notranslate"><span class="pre">gos.View</span></code> objects. This feature allows users to be much more concise with the Python API compared to the Gosling JSON equivalent.</p>
+<blockquote>
+<div><p><strong>Note</strong> in the code example above, we reuse <code class="docutils literal notranslate"><span class="pre">track</span></code> to create a <em>new</em> view (with <code class="docutils literal notranslate"><span class="pre">title</span></code> and <code class="docutils literal notranslate"><span class="pre">xDomain</span></code>) without redefining the visualization from scratch.</p>
+</div></blockquote>
+<section id="the-data">
+<h2>The data<a class="headerlink" href="#the-data" title="Permalink to this headline">#</a></h2>
+<p>In this section we will visualize several scATAC-seq “pseudobulk” tracks from <a class="reference external" href="https://www.nature.com/articles/s41588-020-00721-x">Corces et. al (<em>Nature Genetics, 2020</em>)</a> multi-omic atlas of the human brain. Each scATAC-seq track is stored in a separate BigWig file and represents the normalized aggregate signal of all cells from a given cell-type in the human brain.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urls</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa">f</span><span class="s2">&quot;https://s3.amazonaws.com/gosling-lang.org/data/</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">[</span>
+        <span class="s2">&quot;ExcitatoryNeurons-insertions_bin100_RIPnorm.bw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;InhibitoryNeurons-insertions_bin100_RIPnorm.bw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Microglia-insertions_bin100_RIPnorm.bw&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Astrocytes-insertions_bin100_RIPnorm.bw&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">]</span>
+<span class="n">urls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw&#39;,
+ &#39;https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw&#39;,
+ &#39;https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw&#39;,
+ &#39;https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the previous section we visualized a text-based data format which was already tabular (BED). For non-tabular data formats supported by Gosling (e.g., BAM, BigWig) we need to be explicit about how to translate these files to a tabular representation in Gosling for which we can build our visualization.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">bigwig</span><span class="p">(</span><span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">column</span><span class="o">=</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;peak&quot;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;type&#39;: &#39;bigwig&#39;,
+ &#39;url&#39;: &#39;https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw&#39;,
+ &#39;column&#39;: &#39;position&#39;,
+ &#39;value&#39;: &#39;peak&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;position:G&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;peak:Q&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-ee47dc523f6d42fda07a783a3e532e29"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-ee47dc523f6d42fda07a783a3e532e29');
+    var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 180, "mark": "bar", "width": 800, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+</section>
+<section id="overlay-track">
+<h2>Overlay track<a class="headerlink" href="#overlay-track" title="Permalink to this headline">#</a></h2>
+<p>With the quantitative data type for <code class="docutils literal notranslate"><span class="pre">peak</span></code>, we can experiment with different marks in our visualization. Rather than repeating the definition, we use a <code class="docutils literal notranslate"><span class="pre">base</span></code> track to derive other modified tracks.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;position:G&quot;</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="n">heatmap</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">mark_rect</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;peak:Q&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">heatmap</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-a5e49cc4b3444fb88ebed2cdca4c2b32"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-a5e49cc4b3444fb88ebed2cdca4c2b32');
+    var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 60, "mark": "rect", "width": 800, "color": {"field": "peak", "type": "quantitative"}, "x": {"field": "position", "type": "genomic"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;peak:Q&quot;</span><span class="p">),</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="s2">&quot;gray&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">line</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-0ff4a1c947694b0ab1c809ee5f98e5b1"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-0ff4a1c947694b0ab1c809ee5f98e5b1');
+    var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 60, "mark": "line", "width": 800, "color": {"value": "gray"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span>
+<span class="n">points</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-4585e36a196b48b485527a8278061fba"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-4585e36a196b48b485527a8278061fba');
+    var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 60, "mark": "point", "width": 800, "color": {"value": "gray"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colored_points</span> <span class="o">=</span> <span class="n">points</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s2">&quot;peak:Q&quot;</span><span class="p">),</span> <span class="c1"># overrides color encoding</span>
+    <span class="n">size</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Size</span><span class="p">(</span><span class="s2">&quot;peak:Q&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">colored_points</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-ca1e03526acf4222b2e138602ae5397d"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-ca1e03526acf4222b2e138602ae5397d');
+    var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 60, "mark": "point", "width": 800, "color": {"field": "peak", "type": "quantitative"}, "size": {"field": "peak", "type": "quantitative"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<p>Since the tracks above share some of the same encodings, we can layer the tracks together to create a composite <code class="docutils literal notranslate"><span class="pre">&quot;overlay&quot;</span></code> which combines different marks.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">colored_points</span><span class="p">)</span> <span class="c1"># returns a View</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-c5831cfc63ec40deb10db9b3db60c4a1"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-c5831cfc63ec40deb10db9b3db60c4a1');
+    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "mark": "line", "color": {"value": "gray"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "mark": "point", "color": {"field": "peak", "type": "quantitative"}, "size": {"field": "peak", "type": "quantitative"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}], "width": 800, "height": 60};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<p>While this example is fairly contrived, the ability to create overlay tracks is an essential feature in Gosling and allows much more complex visual encodings (e.g. genome annotations).</p>
+</section>
+<section id="track-function">
+<h2>Track function<a class="headerlink" href="#track-function" title="Permalink to this headline">#</a></h2>
+<p>The previous section demonstrated further how track definitions may be reused and extended. In this section we will show how a Python function can be defined to reuse a track definition for other data sources.</p>
+<p>We can refactor this snippet from earlier so that we have a <em>function</em> that generates a barplot for any scATAC-seq track above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">barplot</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">bigwig</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;peak&quot;</span><span class="p">)</span>
+    <span class="n">track</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;position:G&quot;</span><span class="p">),</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s2">&quot;peak:Q&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">color</span><span class="p">:</span>
+        <span class="n">track</span> <span class="o">=</span> <span class="n">track</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">color</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">title</span><span class="p">:</span>
+        <span class="n">track</span> <span class="o">=</span> <span class="n">track</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">track</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+
+<span class="n">barplot</span><span class="p">(</span><span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-f307eea1b2e048028a92fc0579505c89"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-f307eea1b2e048028a92fc0579505c89');
+    var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">urls</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw&#39;,
+ &#39;https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw&#39;,
+ &#39;https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw&#39;,
+ &#39;https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can then reuse this utility to create multiple tracks to combine together.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tracks</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">url</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;#F29B67&quot;</span><span class="p">,</span> <span class="s2">&quot;#3DC491&quot;</span><span class="p">,</span> <span class="s2">&quot;#565C8B&quot;</span><span class="p">,</span>  <span class="s2">&quot;#77C0FA&quot;</span><span class="p">]):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">track</span> <span class="o">=</span> <span class="n">barplot</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">tracks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track</span><span class="p">)</span>
+<span class="n">tracks</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Track({
+   color: ColorValue({
+     value: &#39;#F29B67&#39;
+   }),
+   data: {&#39;type&#39;: &#39;bigwig&#39;, &#39;url&#39;: &#39;https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw&#39;, &#39;column&#39;: &#39;position&#39;, &#39;value&#39;: &#39;peak&#39;},
+   height: 40,
+   mark: &#39;bar&#39;,
+   title: &#39;ExcitatoryNeurons&#39;,
+   width: 800,
+   x: X({
+     shorthand: &#39;position:G&#39;
+   }),
+   y: Y({
+     axis: &#39;right&#39;,
+     shorthand: &#39;peak:Q&#39;
+   })
+ }),
+ Track({
+   color: ColorValue({
+     value: &#39;#3DC491&#39;
+   }),
+   data: {&#39;type&#39;: &#39;bigwig&#39;, &#39;url&#39;: &#39;https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw&#39;, &#39;column&#39;: &#39;position&#39;, &#39;value&#39;: &#39;peak&#39;},
+   height: 40,
+   mark: &#39;bar&#39;,
+   title: &#39;InhibitoryNeurons&#39;,
+   width: 800,
+   x: X({
+     shorthand: &#39;position:G&#39;
+   }),
+   y: Y({
+     axis: &#39;right&#39;,
+     shorthand: &#39;peak:Q&#39;
+   })
+ }),
+ Track({
+   color: ColorValue({
+     value: &#39;#565C8B&#39;
+   }),
+   data: {&#39;type&#39;: &#39;bigwig&#39;, &#39;url&#39;: &#39;https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw&#39;, &#39;column&#39;: &#39;position&#39;, &#39;value&#39;: &#39;peak&#39;},
+   height: 40,
+   mark: &#39;bar&#39;,
+   title: &#39;Microglia&#39;,
+   width: 800,
+   x: X({
+     shorthand: &#39;position:G&#39;
+   }),
+   y: Y({
+     axis: &#39;right&#39;,
+     shorthand: &#39;peak:Q&#39;
+   })
+ }),
+ Track({
+   color: ColorValue({
+     value: &#39;#77C0FA&#39;
+   }),
+   data: {&#39;type&#39;: &#39;bigwig&#39;, &#39;url&#39;: &#39;https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw&#39;, &#39;column&#39;: &#39;position&#39;, &#39;value&#39;: &#39;peak&#39;},
+   height: 40,
+   mark: &#39;bar&#39;,
+   title: &#39;Astrocytes&#39;,
+   width: 800,
+   x: X({
+     shorthand: &#39;position:G&#39;
+   }),
+   y: Y({
+     axis: &#39;right&#39;,
+     shorthand: &#39;peak:Q&#39;
+   })
+ })]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tracks</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-1868fa01a0ce4491977f60dfe7b6882f"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-1868fa01a0ce4491977f60dfe7b6882f');
+    var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#3DC491"}, "title": "InhibitoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<p>Combined together into a single visualization with <code class="docutils literal notranslate"><span class="pre">gos.stack</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># returns a `View` which shared genomic domain for all child tracks</span>
+<span class="n">gos</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="o">*</span><span class="n">tracks</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">xDomain</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">GenomicDomain</span><span class="p">(</span><span class="n">chromosome</span><span class="o">=</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="p">[</span><span class="mi">52168000</span><span class="p">,</span> <span class="mi">52890000</span><span class="p">]),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-c1db9837306f44d98d95151d8f19f22b"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-c1db9837306f44d98d95151d8f19f22b');
+    var spec = {"alignment": "stack", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#F29B67"}, "title": "ExcitatoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#3DC491"}, "title": "InhibitoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#565C8B"}, "title": "Microglia", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#77C0FA"}, "title": "Astrocytes", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "xDomain": {"chromosome": "3", "interval": [52168000, 52890000]}};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gos</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="o">*</span><span class="n">tracks</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="s2">&quot;circular&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>.error { color: red; }</style>
+  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
+</head>
+<body>
+  <div id="jupyter-gosling-dc2335ec4c7047138a1f75581e95fadc"></div>
+  <script type="module">
+
+    async function loadScript(src) {
+        return new Promise(resolve => {
+            const script = document.createElement('script');
+            script.onload = resolve;
+            script.src = src;
+            script.async = false;
+            document.head.appendChild(script);
+        });
+    }
+
+    async function loadGosling() {
+        // Manually load scripts from window namespace since requirejs might not be
+        // available in all browser environments.
+
+        // https://github.com/DanielHreben/requirejs-toggle
+        if (!window.gosling) {
+
+            // https://github.com/DanielHreben/requirejs-toggle
+            window.__requirejsToggleBackup = {
+                define: window.define,
+                require: window.require,
+                requirejs: window.requirejs,
+            };
+
+            for (const field of Object.keys(window.__requirejsToggleBackup)) {
+                window[field] = undefined;
+            }
+
+            // load dependencies sequentially
+            const sources = [
+                "https://unpkg.com/react@17/umd/react.production.min.js",
+                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
+                "https://unpkg.com/higlass@1.11/dist/hglib.js",
+                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+            ];
+
+            for (const src of sources) await loadScript(src);
+
+            // restore requirejs after scripts have loaded
+            Object.assign(window, window.__requirejsToggleBackup);
+            delete window.__requirejsToggleBackup;
+
+        }
+
+        return window.gosling;
+    };
+
+    var el = document.getElementById('jupyter-gosling-dc2335ec4c7047138a1f75581e95fadc');
+    var spec = {"alignment": "stack", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#F29B67"}, "title": "ExcitatoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#3DC491"}, "title": "InhibitoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#565C8B"}, "title": "Microglia", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#77C0FA"}, "title": "Astrocytes", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "layout": "circular"};
+    var opt = {"padding": 0, "theme": null};
+
+    loadGosling()
+        .then(gosling => gosling.embed(el, spec, opt))
+        .catch(err => {
+            el.innerHTML = `<div class="error">
+    <p>JavaScript Error: ${error.message}</p>
+    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
+</div>`;
+            throw error;
+        });
+  </script>
+</body>
+</html></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Outline</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="02-Track-Alignment-and-Data-Loading.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Session 2: Track Alignment and Data Loading</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Sehi L'Yi, Trevor Manz, Qianwen Wang, Nils Gehlenborg<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
