@@ -622,153 +622,153 @@ title="Print to PDF"
 <p>To get started, make sure you have <code class="docutils literal notranslate"><span class="pre">gosling</span></code> installed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install gosling<span class="o">[</span>all<span class="o">]==</span><span class="m">0</span>.0.8
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install gosling<span class="o">[</span>all<span class="o">]==</span><span class="m">0</span>.0.9
 <span class="kn">import</span> <span class="nn">gosling</span> <span class="k">as</span> <span class="nn">gos</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gosling[all]==0.0.8 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (0.0.8)
-Requirement already satisfied: jsonschema&lt;4.0,&gt;=3.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.8) (3.2.0)
-Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.8) (3.1.2)
-Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.8) (1.4.3)
-Requirement already satisfied: portpicker in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.8) (1.5.2)
-Requirement already satisfied: gosling-widget in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.8) (0.0.2)
-Requirement already satisfied: uvicorn in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.8) (0.18.2)
-Requirement already satisfied: starlette in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.8) (0.20.4)
-Requirement already satisfied: clodius in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.8) (0.19.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gosling[all]==0.0.9 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (0.0.9)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling[all]==0.0.8) (58.1.0)
-Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling[all]==0.0.8) (21.4.0)
-Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling[all]==0.0.8) (1.16.0)
-Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling[all]==0.0.8) (0.18.1)
-Requirement already satisfied: Click&gt;=7 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (8.1.3)
-Requirement already satisfied: pysam in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (0.19.1)
-Requirement already satisfied: pydantic in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (1.9.1)
-Requirement already satisfied: pybbi&gt;=0.2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (0.3.2)
-Requirement already satisfied: sortedcontainers in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (2.4.0)
-Requirement already satisfied: slugid in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (2.0.0)
-Requirement already satisfied: negspy in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (0.2.24)
-Requirement already satisfied: h5py&gt;=3.0.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (3.7.0)
-Requirement already satisfied: cooler&gt;=0.8.5 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (0.8.11)
-Requirement already satisfied: tqdm in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (4.64.0)
-Requirement already satisfied: requests in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (2.28.1)
-Requirement already satisfied: dask in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (2022.6.1)
-Requirement already satisfied: nose in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (1.3.7)
-Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (1.23.0)
-Requirement already satisfied: pyfaidx in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.8) (0.7.0)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling[all]==0.0.8) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling[all]==0.0.8) (2022.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jsonschema&lt;4.0,&gt;=3.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.9) (3.2.0)
+Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.9) (1.4.3)
+Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.9) (3.1.2)
+Requirement already satisfied: clodius in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.9) (0.19.0)
+Requirement already satisfied: starlette in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.9) (0.20.4)
+Requirement already satisfied: uvicorn in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.9) (0.18.2)
+Requirement already satisfied: portpicker in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.9) (1.5.2)
+Requirement already satisfied: gosling-widget in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling[all]==0.0.9) (0.0.2)
+Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling[all]==0.0.9) (1.16.0)
+Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling[all]==0.0.9) (58.1.0)
+Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling[all]==0.0.9) (21.4.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling[all]==0.0.9) (0.18.1)
+Requirement already satisfied: negspy in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (0.2.24)
+Requirement already satisfied: Click&gt;=7 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (8.1.3)
+Requirement already satisfied: pysam in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (0.19.1)
+Requirement already satisfied: tqdm in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (4.64.0)
+Requirement already satisfied: pydantic in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (1.9.1)
+Requirement already satisfied: pyfaidx in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (0.7.0)
+Requirement already satisfied: slugid in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (2.0.0)
+Requirement already satisfied: nose in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (1.3.7)
+Requirement already satisfied: pybbi&gt;=0.2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (0.3.2)
+Requirement already satisfied: cooler&gt;=0.8.5 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (0.8.11)
+Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (1.23.0)
+Requirement already satisfied: requests in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (2.28.1)
+Requirement already satisfied: h5py&gt;=3.0.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (3.7.0)
+Requirement already satisfied: dask in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (2022.6.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: ipywidgets in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling-widget-&gt;gosling[all]==0.0.8) (7.7.1)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jinja2-&gt;gosling[all]==0.0.8) (2.1.1)
-Requirement already satisfied: psutil in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from portpicker-&gt;gosling[all]==0.0.8) (5.9.1)
-Requirement already satisfied: anyio&lt;5,&gt;=3.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from starlette-&gt;gosling[all]==0.0.8) (3.6.1)
-Requirement already satisfied: h11&gt;=0.8 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from uvicorn-&gt;gosling[all]==0.0.8) (0.13.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sortedcontainers in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from clodius-&gt;gosling[all]==0.0.9) (2.4.0)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling[all]==0.0.9) (2022.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling[all]==0.0.9) (2.8.2)
+Requirement already satisfied: ipywidgets in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling-widget-&gt;gosling[all]==0.0.9) (7.7.1)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jinja2-&gt;gosling[all]==0.0.9) (2.1.1)
+Requirement already satisfied: psutil in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from portpicker-&gt;gosling[all]==0.0.9) (5.9.1)
+Requirement already satisfied: anyio&lt;5,&gt;=3.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from starlette-&gt;gosling[all]==0.0.9) (3.6.1)
+Requirement already satisfied: h11&gt;=0.8 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from uvicorn-&gt;gosling[all]==0.0.9) (0.13.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: idna&gt;=2.8 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from anyio&lt;5,&gt;=3.4.0-&gt;starlette-&gt;gosling[all]==0.0.8) (3.3)
-Requirement already satisfied: sniffio&gt;=1.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from anyio&lt;5,&gt;=3.4.0-&gt;starlette-&gt;gosling[all]==0.0.8) (1.2.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sniffio&gt;=1.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from anyio&lt;5,&gt;=3.4.0-&gt;starlette-&gt;gosling[all]==0.0.9) (1.2.0)
+Requirement already satisfied: idna&gt;=2.8 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from anyio&lt;5,&gt;=3.4.0-&gt;starlette-&gt;gosling[all]==0.0.9) (3.3)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: simplejson in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.8) (3.17.6)
-Requirement already satisfied: asciitree in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.8) (0.3.3)
-Requirement already satisfied: pypairix in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.8) (0.3.7)
-Requirement already satisfied: cytoolz&lt;0.11 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.8) (0.10.1)
-Requirement already satisfied: scipy&gt;=0.16 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.8) (1.8.1)
-Requirement already satisfied: pyyaml in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.8) (6.0)
-Requirement already satisfied: multiprocess in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.8) (0.70.13)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: asciitree in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.9) (0.3.3)
+Requirement already satisfied: simplejson in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.9) (3.17.6)
+Requirement already satisfied: scipy&gt;=0.16 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.9) (1.8.1)
+Requirement already satisfied: pyyaml in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.9) (6.0)
+Requirement already satisfied: multiprocess in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.9) (0.70.13)
+Requirement already satisfied: pypairix in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.9) (0.3.7)
+Requirement already satisfied: cytoolz&lt;0.11 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.9) (0.10.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.8) (21.3)
-Requirement already satisfied: fsspec&gt;=0.6.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.8) (2022.5.0)
-Requirement already satisfied: toolz&gt;=0.8.2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.8) (0.11.2)
-Requirement already satisfied: cloudpickle&gt;=1.1.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.8) (2.1.0)
-Requirement already satisfied: partd&gt;=0.3.10 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.8) (1.2.0)
-Requirement already satisfied: widgetsnbextension~=3.6.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (3.6.1)
-Requirement already satisfied: traitlets&gt;=4.3.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (5.3.0)
-Requirement already satisfied: ipython-genutils~=0.2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.2.0)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (1.1.1)
-Requirement already satisfied: ipykernel&gt;=4.5.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (6.15.0)
-Requirement already satisfied: ipython&gt;=4.0.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (8.4.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.9) (21.3)
+Requirement already satisfied: toolz&gt;=0.8.2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.9) (0.11.2)
+Requirement already satisfied: fsspec&gt;=0.6.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.9) (2022.5.0)
+Requirement already satisfied: cloudpickle&gt;=1.1.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.9) (2.1.0)
+Requirement already satisfied: partd&gt;=0.3.10 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from dask-&gt;clodius-&gt;gosling[all]==0.0.9) (1.2.0)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.2.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (6.15.0)
+Requirement already satisfied: traitlets&gt;=4.3.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (5.3.0)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (1.1.1)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (3.6.1)
+Requirement already satisfied: ipython&gt;=4.0.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (8.4.0)
+Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pydantic-&gt;clodius-&gt;gosling[all]==0.0.9) (4.3.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pydantic-&gt;clodius-&gt;gosling[all]==0.0.8) (4.3.0)
-Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from requests-&gt;clodius-&gt;gosling[all]==0.0.8) (2.1.0)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from requests-&gt;clodius-&gt;gosling[all]==0.0.8) (2022.6.15)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from requests-&gt;clodius-&gt;gosling[all]==0.0.8) (1.26.9)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from requests-&gt;clodius-&gt;gosling[all]==0.0.9) (2022.6.15)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from requests-&gt;clodius-&gt;gosling[all]==0.0.9) (1.26.9)
+Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from requests-&gt;clodius-&gt;gosling[all]==0.0.9) (2.1.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib-inline&gt;=0.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.1.3)
-Requirement already satisfied: tornado&gt;=6.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (6.2)
-Requirement already satisfied: jupyter-client&gt;=6.1.12 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (7.3.4)
-Requirement already satisfied: pyzmq&gt;=17 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (23.2.0)
-Requirement already satisfied: nest-asyncio in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (1.5.5)
-Requirement already satisfied: debugpy&gt;=1.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (1.6.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nest-asyncio in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (1.5.5)
+Requirement already satisfied: tornado&gt;=6.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (6.2)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (3.0.30)
-Requirement already satisfied: decorator in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (5.1.1)
-Requirement already satisfied: backcall in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.2.0)
-Requirement already satisfied: stack-data in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.3.0)
-Requirement already satisfied: pexpect&gt;4.3 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (4.8.0)
-Requirement already satisfied: jedi&gt;=0.16 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.18.1)
-Requirement already satisfied: pygments&gt;=2.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (2.12.0)
-Requirement already satisfied: pickleshare in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.7.5)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyzmq&gt;=17 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (23.2.0)
+Requirement already satisfied: debugpy&gt;=1.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (1.6.0)
+Requirement already satisfied: matplotlib-inline&gt;=0.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.1.3)
+Requirement already satisfied: jupyter-client&gt;=6.1.12 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (7.3.4)
+Requirement already satisfied: backcall in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.2.0)
+Requirement already satisfied: stack-data in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.3.0)
+Requirement already satisfied: jedi&gt;=0.16 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.18.1)
+Requirement already satisfied: pygments&gt;=2.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (2.12.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (3.0.30)
+Requirement already satisfied: pickleshare in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.7.5)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from packaging&gt;=20.0-&gt;dask-&gt;clodius-&gt;gosling[all]==0.0.8) (3.0.9)
-Requirement already satisfied: locket in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from partd&gt;=0.3.10-&gt;dask-&gt;clodius-&gt;gosling[all]==0.0.8) (1.0.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pexpect&gt;4.3 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (4.8.0)
+Requirement already satisfied: decorator in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (5.1.1)
+Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from packaging&gt;=20.0-&gt;dask-&gt;clodius-&gt;gosling[all]==0.0.9) (3.0.9)
+Requirement already satisfied: locket in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from partd&gt;=0.3.10-&gt;dask-&gt;clodius-&gt;gosling[all]==0.0.9) (1.0.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook&gt;=4.4.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (6.4.12)
-Requirement already satisfied: dill&gt;=0.3.5.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from multiprocess-&gt;cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.8) (0.3.5.1)
-Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.8.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: notebook&gt;=4.4.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (6.4.12)
+Requirement already satisfied: dill&gt;=0.3.5.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from multiprocess-&gt;cooler&gt;=0.8.5-&gt;clodius-&gt;gosling[all]==0.0.9) (0.3.5.1)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.8.3)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jupyter-core&gt;=4.9.2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jupyter-client&gt;=6.1.12-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (4.10.0)
-Requirement already satisfied: entrypoints in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jupyter-client&gt;=6.1.12-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.4)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: entrypoints in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jupyter-client&gt;=6.1.12-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.4)
+Requirement already satisfied: jupyter-core&gt;=4.9.2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jupyter-client&gt;=6.1.12-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (4.10.0)
+Requirement already satisfied: nbformat in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (5.4.0)
+Requirement already satisfied: prometheus-client in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.14.1)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (1.8.0)
+Requirement already satisfied: nbconvert&gt;=5 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (6.5.0)
+Requirement already satisfied: argon2-cffi in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (21.3.0)
+Requirement already satisfied: terminado&gt;=0.8.3 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.15.0)
+Requirement already satisfied: ptyprocess&gt;=0.5 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pexpect&gt;4.3-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.7.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: prometheus-client in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.14.1)
-Requirement already satisfied: argon2-cffi in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (21.3.0)
-Requirement already satisfied: nbformat in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (5.4.0)
-Requirement already satisfied: Send2Trash&gt;=1.8.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (1.8.0)
-Requirement already satisfied: terminado&gt;=0.8.3 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.15.0)
-Requirement already satisfied: nbconvert&gt;=5 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (6.5.0)
-Requirement already satisfied: ptyprocess&gt;=0.5 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pexpect&gt;4.3-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.7.0)
-Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.2.5)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: wcwidth in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.2.5)
+Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.2.2)
+Requirement already satisfied: executing in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.8.3)
+Requirement already satisfied: asttokens in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (2.0.5)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: executing in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.8.3)
-Requirement already satisfied: asttokens in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (2.0.5)
-Requirement already satisfied: pure-eval in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from stack-data-&gt;ipython&gt;=4.0.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.2.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbclient&gt;=0.5.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.5.13)
+Requirement already satisfied: jupyterlab-pygments in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.2.2)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (1.5.0)
+Requirement already satisfied: bleach in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (5.0.1)
+Requirement already satisfied: tinycss2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (1.1.1)
+Requirement already satisfied: beautifulsoup4 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (4.11.1)
+Requirement already satisfied: defusedxml in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.7.1)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.8.4)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: nbclient&gt;=0.5.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.5.13)
-Requirement already satisfied: bleach in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (5.0.1)
-Requirement already satisfied: beautifulsoup4 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (4.11.1)
-Requirement already satisfied: tinycss2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (1.1.1)
-Requirement already satisfied: defusedxml in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.7.1)
-Requirement already satisfied: jupyterlab-pygments in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.2.2)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.8.4)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (1.5.0)
-Requirement already satisfied: fastjsonschema in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (2.15.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fastjsonschema in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (2.15.3)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: argon2-cffi-bindings in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (21.2.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: argon2-cffi-bindings in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (21.2.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cffi&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (1.15.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cffi&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (1.15.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from beautifulsoup4-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (2.3.2.post1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: soupsieve&gt;1.2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from beautifulsoup4-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (2.3.2.post1)
-Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from bleach-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (0.5.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from bleach-&gt;nbconvert&gt;=5-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (0.5.1)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.8) (2.21)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pycparser in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets-&gt;gosling-widget-&gt;gosling[all]==0.0.9) (2.21)
 </pre></div>
 </div>
 </div>
@@ -821,7 +821,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-9c02de3dc13e4ef1abaede9ce62da52b"></div>
+  <div id="jupyter-gosling-83695bf24a8a4f7283660276f600646c"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -858,7 +858,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -872,7 +872,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-9c02de3dc13e4ef1abaede9ce62da52b');
+    var el = document.getElementById('jupyter-gosling-83695bf24a8a4f7283660276f600646c');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "bar", "width": 800, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -906,7 +906,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-2fb0795b9b224dbf913ee6bd1f965640"></div>
+  <div id="jupyter-gosling-8ad1c682d79a43b7b9bfe030c4ab38a8"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -943,7 +943,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -957,7 +957,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-2fb0795b9b224dbf913ee6bd1f965640');
+    var el = document.getElementById('jupyter-gosling-8ad1c682d79a43b7b9bfe030c4ab38a8');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "bar", "width": 800, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "layout": "linear"};
     var opt = {"padding": 0, "theme": null};
 
@@ -992,7 +992,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-83c26ec65b4f44f5879ec20e6601a0db"></div>
+  <div id="jupyter-gosling-47f76a28baa847ebada11ae233ebfed1"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1029,7 +1029,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1043,7 +1043,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-83c26ec65b4f44f5879ec20e6601a0db');
+    var el = document.getElementById('jupyter-gosling-47f76a28baa847ebada11ae233ebfed1');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "bar", "width": 200, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "layout": "circular"};
     var opt = {"padding": 0, "theme": null};
 
@@ -1136,7 +1136,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-605500989e714f14b01e302c062b5926"></div>
+  <div id="jupyter-gosling-64090db058504b9f9053f88634b4efa0"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1173,7 +1173,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1187,7 +1187,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-605500989e714f14b01e302c062b5926');
+    var el = document.getElementById('jupyter-gosling-64090db058504b9f9053f88634b4efa0');
     var spec = {"alignment": "stack", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "bar", "width": 800, "color": {"value": "#4472c4"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "line", "width": 800, "color": {"value": "#f3b285"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "line", "width": 800, "color": {"value": "#f3b285"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "spacing": 1};
     var opt = {"padding": 0, "theme": null};
 
@@ -1222,7 +1222,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-9926cfedd89b41959736397b8f80e207"></div>
+  <div id="jupyter-gosling-db019596a9404c0fb1ac6aba27a5e2b6"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1259,7 +1259,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1273,7 +1273,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-9926cfedd89b41959736397b8f80e207');
+    var el = document.getElementById('jupyter-gosling-db019596a9404c0fb1ac6aba27a5e2b6');
     var spec = {"alignment": "stack", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "bar", "width": 400, "color": {"value": "#4472c4"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "line", "width": 400, "color": {"value": "#f3b285"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "spacing": 1, "layout": "circular"};
     var opt = {"padding": 0, "theme": null};
 
@@ -1308,7 +1308,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-4f2cf37543ff4a7a9e6edf5d83466c1e"></div>
+  <div id="jupyter-gosling-fd0ca7224d0044d5afd1a4b2038be096"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1345,7 +1345,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1359,7 +1359,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-4f2cf37543ff4a7a9e6edf5d83466c1e');
+    var el = document.getElementById('jupyter-gosling-fd0ca7224d0044d5afd1a4b2038be096');
     var spec = {"alignment": "stack", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "bar", "width": 800, "color": {"value": "#4472c4"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "line", "width": 800, "color": {"value": "#f3b285"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1394,7 +1394,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-cf4f404228634a3ba6a51942158ca2ee"></div>
+  <div id="jupyter-gosling-6afbef61b9f0413090bf7c84aad323be"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1431,7 +1431,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1445,7 +1445,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-cf4f404228634a3ba6a51942158ca2ee');
+    var el = document.getElementById('jupyter-gosling-6afbef61b9f0413090bf7c84aad323be');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "mark": "bar", "color": {"value": "#4472c4"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "mark": "line", "color": {"value": "#f3b285"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "width": 400, "height": 50, "spacing": 1, "layout": "circular"};
     var opt = {"padding": 0, "theme": null};
 
@@ -1582,7 +1582,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-cd9d1c4ad37249a5b58d2672c639066f"></div>
+  <div id="jupyter-gosling-494b7b07ffea44ecbcd74696fe50ffba"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1619,7 +1619,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1633,7 +1633,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-cd9d1c4ad37249a5b58d2672c639066f');
+    var el = document.getElementById('jupyter-gosling-494b7b07ffea44ecbcd74696fe50ffba');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rule", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["+"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "strokeWidth": {"value": 3}, "style": {"linePattern": {"type": "triangleRight", "size": 5}}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rule", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["-"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "strokeWidth": {"value": 3}, "style": {"linePattern": {"type": "triangleLeft", "size": 5}}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rect", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["exon"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "triangleRight", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["+"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"align": "left"}, "title": "Genes | hg38", "x": {"axis": "top", "field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "triangleLeft", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["-"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"align": "right"}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "text", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"dy": 15}, "text": {"field": "name", "type": "nominal"}, "title": "Genes | hg38", "visibility": [{"operation": "LT", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10, "target": "mark"}], "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}], "width": 800, "height": 100, "xDomain": {"chromosome": "1", "interval": [103400000, 103700000]}};
     var opt = {"padding": 0, "theme": null};
 
@@ -1671,7 +1671,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-4d0342e87d4c4e43ace6c11ae0fd23f3"></div>
+  <div id="jupyter-gosling-a14325975c224182993b7452d8cbeaa3"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1708,7 +1708,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1722,7 +1722,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-4d0342e87d4c4e43ace6c11ae0fd23f3');
+    var el = document.getElementById('jupyter-gosling-a14325975c224182993b7452d8cbeaa3');
     var spec = {"alignment": "stack", "tracks": [{"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rule", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["+"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "strokeWidth": {"value": 3}, "style": {"linePattern": {"type": "triangleRight", "size": 5}}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rule", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["-"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "strokeWidth": {"value": 3}, "style": {"linePattern": {"type": "triangleLeft", "size": 5}}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rect", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["exon"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "triangleRight", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["+"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"align": "left"}, "title": "Genes | hg38", "x": {"axis": "top", "field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "triangleLeft", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["-"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"align": "right"}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "text", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"dy": 15}, "text": {"field": "name", "type": "nominal"}, "title": "Genes | hg38", "visibility": [{"operation": "LT", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10, "target": "mark"}], "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}], "width": 800, "height": 100}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "bar", "width": 800, "color": {"value": "#4472c4"}, "title": "Excitatory Neuron ATAC-seq", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "xDomain": {"chromosome": "1", "interval": [103400000, 103700000]}};
     var opt = {"padding": 0, "theme": null};
 
@@ -1783,7 +1783,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-087d6f4ac6464568a278a6d6fa5dec3c"></div>
+  <div id="jupyter-gosling-2f7e95e4da31483a8151c1424892fb62"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1820,7 +1820,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1834,7 +1834,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-087d6f4ac6464568a278a6d6fa5dec3c');
+    var el = document.getElementById('jupyter-gosling-2f7e95e4da31483a8151c1424892fb62');
     var spec = {"arrangement": "horizontal", "views": [{"alignment": "stack", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 100, "mark": "bar", "width": 300, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 100, "mark": "bar", "width": 300, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]}, {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 240, "mark": "bar", "width": 600, "color": {"value": "#4472c4"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1875,7 +1875,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-21cce1a4fbd24a1c9f7f7963c4e08ca8"></div>
+  <div id="jupyter-gosling-e0c301104329422c9ce43345f7f1d84e"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1912,7 +1912,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1926,7 +1926,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-21cce1a4fbd24a1c9f7f7963c4e08ca8');
+    var el = document.getElementById('jupyter-gosling-e0c301104329422c9ce43345f7f1d84e');
     var spec = {"arrangement": "horizontal", "views": [{"alignment": "stack", "tracks": [{"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rule", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["+"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "strokeWidth": {"value": 3}, "style": {"linePattern": {"type": "triangleRight", "size": 5}}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rule", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["-"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "strokeWidth": {"value": 3}, "style": {"linePattern": {"type": "triangleLeft", "size": 5}}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rect", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["exon"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "triangleRight", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["+"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"align": "left"}, "title": "Genes | hg38", "x": {"axis": "top", "field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "triangleLeft", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["-"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"align": "right"}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "text", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"dy": 15}, "text": {"field": "name", "type": "nominal"}, "title": "Genes | hg38", "visibility": [{"operation": "LT", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10, "target": "mark"}], "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}], "width": 300, "height": 100}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 100, "mark": "bar", "width": 300, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]}, {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 240, "mark": "bar", "width": 600, "color": {"value": "#4472c4"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1965,7 +1965,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-cb5223153421463e88b422ed86a7fef6"></div>
+  <div id="jupyter-gosling-8d0800d3b99241019d901bc97ca881bb"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2002,7 +2002,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2016,7 +2016,7 @@ Requirement already satisfied: webencodings in /opt/hostedtoolcache/Python/3.10.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-cb5223153421463e88b422ed86a7fef6');
+    var el = document.getElementById('jupyter-gosling-8d0800d3b99241019d901bc97ca881bb');
     var spec = {"arrangement": "serial", "views": [{"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 50, "mark": "bar", "width": 300, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "layout": "circular"}, {"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rule", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["+"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "strokeWidth": {"value": 3}, "style": {"linePattern": {"type": "triangleRight", "size": 5}}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rule", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["-"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "strokeWidth": {"value": 3}, "style": {"linePattern": {"type": "triangleLeft", "size": 5}}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "rect", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["exon"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "triangleRight", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["+"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"align": "left"}, "title": "Genes | hg38", "x": {"axis": "top", "field": "end", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "triangleLeft", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}, {"type": "filter", "field": "strand", "oneOf": ["-"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"align": "right"}, "title": "Genes | hg38", "x": {"axis": "top", "field": "start", "type": "genomic"}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 5, "name": "strand", "type": "nominal"}, {"index": 3, "name": "name", "type": "nominal"}], "exonIntervalFields": [{"index": 12, "name": "start"}, {"index": 13, "name": "end"}]}, "mark": "text", "color": {"domain": ["+", "-"], "field": "strand", "range": ["#7585FF", "#FF8A85"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "type", "oneOf": ["gene"]}], "row": {"domain": ["+", "-"], "field": "strand", "type": "nominal"}, "size": {"value": 15}, "style": {"dy": 15}, "text": {"field": "name", "type": "nominal"}, "title": "Genes | hg38", "visibility": [{"operation": "LT", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10, "target": "mark"}], "x": {"axis": "top", "field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}], "width": 300, "height": 100, "layout": "circular"}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -2183,7 +2183,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-18beeb682f4a4f919431dc8def90d328"></div>
+  <div id="jupyter-gosling-8e90f5e78d4d492d9e17014b487475c5"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2220,7 +2220,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2234,7 +2234,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-18beeb682f4a4f919431dc8def90d328');
+    var el = document.getElementById('jupyter-gosling-8e90f5e78d4d492d9e17014b487475c5');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "stroke": {"value": "black"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "none", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}]}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 20};
     var opt = {"padding": 0, "theme": null};
 
@@ -2267,7 +2267,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-a6e241b4f57e41699ad7fc09cff4dc8b"></div>
+  <div id="jupyter-gosling-3be33fbd398f4cee874e13cb5a61bf97"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2304,7 +2304,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2318,7 +2318,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-a6e241b4f57e41699ad7fc09cff4dc8b');
+    var el = document.getElementById('jupyter-gosling-3be33fbd398f4cee874e13cb5a61bf97');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "stroke": {"value": "black"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "none", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}]}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 20, "xDomain": {"chromosome": "chr2"}};
     var opt = {"padding": 0, "theme": null};
 
@@ -2358,7 +2358,7 @@ chr1  27600000  29900000  p35.3   gpos25
                                  Dload  Upload   Total   Spent    Left  Speed
 
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 30748  100 30748    0     0  1876k      0 --:--:-- --:--:-- --:--:-- 1876k
+100 30748  100 30748    0     0  1000k      0 --:--:-- --:--:-- --:--:-- 1000k
 </pre></div>
 </div>
 </div>
@@ -2423,7 +2423,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-9116ded2bac04be4871dcf842197ee3a"></div>
+  <div id="jupyter-gosling-319e4553578a41d7b752c4a4a7e449dc"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2460,7 +2460,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2474,8 +2474,8 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-9116ded2bac04be4871dcf842197ee3a');
-    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "http://localhost:35415/4fdd6e53-b132-4de7-bb1a-998ba528d093.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "stroke": {"value": "black"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "none", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:35415/4fdd6e53-b132-4de7-bb1a-998ba528d093.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}]}, {"data": {"type": "csv", "url": "http://localhost:35415/4fdd6e53-b132-4de7-bb1a-998ba528d093.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:35415/4fdd6e53-b132-4de7-bb1a-998ba528d093.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 20, "xDomain": {"chromosome": "chr2"}};
+    var el = document.getElementById('jupyter-gosling-319e4553578a41d7b752c4a4a7e449dc');
+    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "http://localhost:36187/f3a13e7e-3235-43ba-bb55-efaefc544741.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "stroke": {"value": "black"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "none", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:36187/f3a13e7e-3235-43ba-bb55-efaefc544741.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}]}, {"data": {"type": "csv", "url": "http://localhost:36187/f3a13e7e-3235-43ba-bb55-efaefc544741.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:36187/f3a13e7e-3235-43ba-bb55-efaefc544741.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 20, "xDomain": {"chromosome": "chr2"}};
     var opt = {"padding": 0, "theme": null};
 
     loadGosling()
@@ -2672,7 +2672,7 @@ chr1  27600000  29900000  p35.3   gpos25
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;type&#39;: &#39;csv&#39;,
- &#39;url&#39;: &#39;http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv&#39;,
+ &#39;url&#39;: &#39;http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv&#39;,
  &#39;chromosomeField&#39;: &#39;chrom&#39;,
  &#39;genomicFields&#39;: [&#39;chromStart&#39;, &#39;chromEnd&#39;]}
 </pre></div>
@@ -2700,7 +2700,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-f44d44a3a20e40b489bcc79643c2267d"></div>
+  <div id="jupyter-gosling-78bc9cbf20054e21b51bb6274f8c8869"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2737,7 +2737,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2751,8 +2751,8 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-f44d44a3a20e40b489bcc79643c2267d');
-    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "stroke": {"value": "black"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "none", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}]}, {"data": {"type": "csv", "url": "http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 20};
+    var el = document.getElementById('jupyter-gosling-78bc9cbf20054e21b51bb6274f8c8869');
+    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "stroke": {"value": "black"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "none", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}]}, {"data": {"type": "csv", "url": "http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 20};
     var opt = {"padding": 0, "theme": null};
 
     loadGosling()
@@ -2783,7 +2783,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-3d057c36ac054ebb9e5e4853fc30322a"></div>
+  <div id="jupyter-gosling-7d9911b362754b4a89361292fbc55fc8"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2820,7 +2820,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2834,8 +2834,8 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-3d057c36ac054ebb9e5e4853fc30322a');
-    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "stroke": {"value": "black"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "none", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}]}, {"data": {"type": "csv", "url": "http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:35415/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 20, "xDomain": {"chromosome": "chr2"}};
+    var el = document.getElementById('jupyter-gosling-7d9911b362754b4a89361292fbc55fc8');
+    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "stroke": {"value": "black"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "none", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}]}, {"data": {"type": "csv", "url": "http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "http://localhost:36187/582136adca397a8e7c5e78380456fc5a.csv", "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"]}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 20, "xDomain": {"chromosome": "chr2"}};
     var opt = {"padding": 0, "theme": null};
 
     loadGosling()

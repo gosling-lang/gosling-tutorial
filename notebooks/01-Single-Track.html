@@ -548,27 +548,25 @@ title="Print to PDF"
 <p>Start by importing <code class="docutils literal notranslate"><span class="pre">gosling</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install <span class="nv">gosling</span><span class="o">==</span><span class="m">0</span>.0.8
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install <span class="nv">gosling</span><span class="o">==</span><span class="m">0</span>.0.9
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gosling==0.0.8 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (0.0.8)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gosling==0.0.9 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (0.0.9)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.8) (3.1.2)
-Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.8) (1.4.3)
-Requirement already satisfied: jsonschema&lt;4.0,&gt;=3.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.8) (3.2.0)
-Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.8) (58.1.0)
-Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.8) (1.16.0)
-Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.8) (21.4.0)
-Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.8) (0.18.1)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jinja2-&gt;gosling==0.0.8) (2.1.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.8) (1.23.0)
-Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.8) (2022.1)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.8) (2.8.2)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (3.1.2)
+Requirement already satisfied: jsonschema&lt;4.0,&gt;=3.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (3.2.0)
+Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (1.4.3)
+Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (1.16.0)
+Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (58.1.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (0.18.1)
+Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (21.4.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jinja2-&gt;gosling==0.0.9) (2.1.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2022.1)
+Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (1.23.0)
 </pre></div>
 </div>
 </div>
@@ -669,7 +667,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-0b140ecfdeb14c81a4248de6ee6c2340"></div>
+  <div id="jupyter-gosling-8b34dafb2bd94271a8276902184f2a75"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -706,7 +704,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -720,7 +718,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-0b140ecfdeb14c81a4248de6ee6c2340');
+    var el = document.getElementById('jupyter-gosling-8b34dafb2bd94271a8276902184f2a75');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "bar", "width": 800}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -758,7 +756,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-64e528d64e3e4917a5352cb71f76c197"></div>
+  <div id="jupyter-gosling-0e7e09b69a954874ac06be01fa2cfbfc"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -795,7 +793,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -809,7 +807,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-64e528d64e3e4917a5352cb71f76c197');
+    var el = document.getElementById('jupyter-gosling-0e7e09b69a954874ac06be01fa2cfbfc');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"axis": "left", "field": "chromStart", "type": "genomic"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -844,7 +842,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-e643c20d673c43a3a09af403e0654753"></div>
+  <div id="jupyter-gosling-6866f2d0162a4cdf853755382047fdad"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -881,7 +879,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -895,7 +893,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-e643c20d673c43a3a09af403e0654753');
+    var el = document.getElementById('jupyter-gosling-6866f2d0162a4cdf853755382047fdad');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"axis": "left", "field": "chromStart", "type": "genomic"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -958,7 +956,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-87bc78b1b48a487ea967929862b3c09e"></div>
+  <div id="jupyter-gosling-4169f73451a1447b99ec8f668cdb728e"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -995,7 +993,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1009,7 +1007,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-87bc78b1b48a487ea967929862b3c09e');
+    var el = document.getElementById('jupyter-gosling-4169f73451a1447b99ec8f668cdb728e');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "strain", "type": "nominal"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1044,7 +1042,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-24e53770c0a54537b7462059d54cc838"></div>
+  <div id="jupyter-gosling-a35c15790c14488abe108b98e9709f7b"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1081,7 +1079,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1095,7 +1093,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-24e53770c0a54537b7462059d54cc838');
+    var el = document.getElementById('jupyter-gosling-a35c15790c14488abe108b98e9709f7b');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"axis": "left", "field": "chromStart", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1130,7 +1128,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-ee4dc2dc6cb041958a76b5bbf1181a19"></div>
+  <div id="jupyter-gosling-298e5e980e9a4a329cd8001ac4f8c4b0"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1167,7 +1165,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1181,7 +1179,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-ee4dc2dc6cb041958a76b5bbf1181a19');
+    var el = document.getElementById('jupyter-gosling-298e5e980e9a4a329cd8001ac4f8c4b0');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1217,7 +1215,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-fa03059424554538b808334511cd844e"></div>
+  <div id="jupyter-gosling-8ac96bbf0cad404180b960b4e234fe41"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1254,7 +1252,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1268,7 +1266,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-fa03059424554538b808334511cd844e');
+    var el = document.getElementById('jupyter-gosling-8ac96bbf0cad404180b960b4e234fe41');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "color": {"value": "black"}, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1308,7 +1306,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-dbb75f7e2c4d47f782a9634620bb182c"></div>
+  <div id="jupyter-gosling-ed54c25a7966472f8f982143114ec15f"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1345,7 +1343,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1359,7 +1357,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-dbb75f7e2c4d47f782a9634620bb182c');
+    var el = document.getElementById('jupyter-gosling-ed54c25a7966472f8f982143114ec15f');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "rect", "width": 800, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1401,7 +1399,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-8d925f772c114b25ad1a5db0db929b45"></div>
+  <div id="jupyter-gosling-dec437fba1c9417b81014194697a4d0b"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1438,7 +1436,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1452,7 +1450,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-8d925f772c114b25ad1a5db0db929b45');
+    var el = document.getElementById('jupyter-gosling-dec437fba1c9417b81014194697a4d0b');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "point", "width": 800, "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "legend": true, "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1495,7 +1493,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-b2984e2d178c4298abecddce2db28d56"></div>
+  <div id="jupyter-gosling-c3dcd7c441a1403082f1374e719598b2"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1532,7 +1530,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1546,7 +1544,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-b2984e2d178c4298abecddce2db28d56');
+    var el = document.getElementById('jupyter-gosling-c3dcd7c441a1403082f1374e719598b2');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "text", "width": 800, "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "legend": true, "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "text": {"field": "stain", "type": "nominal"}, "x": {"field": "chromStart", "type": "genomic"}, "y": {"field": "stain", "type": "nominal"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1598,7 +1596,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-82c4a597ed4b43c280b2363aac41b816"></div>
+  <div id="jupyter-gosling-3357dfb537804c95887a0e54e981fc4d"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1635,7 +1633,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1649,7 +1647,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-82c4a597ed4b43c280b2363aac41b816');
+    var el = document.getElementById('jupyter-gosling-3357dfb537804c95887a0e54e981fc4d');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "rect", "width": 800, "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1685,7 +1683,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-b6ff993428b34d8c92bfada2e9bbba13"></div>
+  <div id="jupyter-gosling-dfe0dd7df74043148d780f97ac9ddd39"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1722,7 +1720,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1736,7 +1734,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-b6ff993428b34d8c92bfada2e9bbba13');
+    var el = document.getElementById('jupyter-gosling-dfe0dd7df74043148d780f97ac9ddd39');
     var spec = {"tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "height": 180, "mark": "rect", "width": 800, "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "title": "Gos is awesome!", "xDomain": {"chromosome": "chr1"}};
     var opt = {"padding": 0, "theme": null};
 
@@ -1837,7 +1835,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-6bf63a4982c44c5ea4e76ed6aa56bc16"></div>
+  <div id="jupyter-gosling-e19cb643a393465d9428fc53b80686a5"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1874,7 +1872,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1888,7 +1886,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-6bf63a4982c44c5ea4e76ed6aa56bc16');
+    var el = document.getElementById('jupyter-gosling-e19cb643a393465d9428fc53b80686a5');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 180, "mark": "bar", "width": 800, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1932,7 +1930,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-a5f74376d4434aa6ad83f17e151a3b75"></div>
+  <div id="jupyter-gosling-2cccc21dc8d146c29ce76695bcfb44ff"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1969,7 +1967,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -1983,7 +1981,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-a5f74376d4434aa6ad83f17e151a3b75');
+    var el = document.getElementById('jupyter-gosling-2cccc21dc8d146c29ce76695bcfb44ff');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 60, "mark": "rect", "width": 800, "color": {"field": "peak", "type": "quantitative"}, "x": {"field": "position", "type": "genomic"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -2019,7 +2017,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-4117ba90f80f4750ac396b3131f2efe6"></div>
+  <div id="jupyter-gosling-85153934b5b2485b97520b99d9c68b41"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2056,7 +2054,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2070,7 +2068,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-4117ba90f80f4750ac396b3131f2efe6');
+    var el = document.getElementById('jupyter-gosling-85153934b5b2485b97520b99d9c68b41');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 60, "mark": "line", "width": 800, "color": {"value": "gray"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -2103,7 +2101,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-ce65c83d1d3746b1a1f12ee785b71c5c"></div>
+  <div id="jupyter-gosling-597c145bd7d444d1877982e7d25ece66"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2140,7 +2138,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2154,7 +2152,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-ce65c83d1d3746b1a1f12ee785b71c5c');
+    var el = document.getElementById('jupyter-gosling-597c145bd7d444d1877982e7d25ece66');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 60, "mark": "point", "width": 800, "color": {"value": "gray"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -2190,7 +2188,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-aa65cb9a50814673afc8a598d2741764"></div>
+  <div id="jupyter-gosling-bdade7dfa1644ff585a8289a545d42c2"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2227,7 +2225,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2241,7 +2239,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-aa65cb9a50814673afc8a598d2741764');
+    var el = document.getElementById('jupyter-gosling-bdade7dfa1644ff585a8289a545d42c2');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 60, "mark": "point", "width": 800, "color": {"field": "peak", "type": "quantitative"}, "size": {"field": "peak", "type": "quantitative"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -2274,7 +2272,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-6015b1f146104550bb178f7ba775edc1"></div>
+  <div id="jupyter-gosling-7e89cdf0732b4836958cd5f99edec134"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2311,7 +2309,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2325,7 +2323,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-6015b1f146104550bb178f7ba775edc1');
+    var el = document.getElementById('jupyter-gosling-7e89cdf0732b4836958cd5f99edec134');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "mark": "line", "color": {"value": "gray"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "mark": "point", "color": {"field": "peak", "type": "quantitative"}, "size": {"field": "peak", "type": "quantitative"}, "x": {"field": "position", "type": "genomic"}, "y": {"field": "peak", "type": "quantitative"}}], "width": 800, "height": 60};
     var opt = {"padding": 0, "theme": null};
 
@@ -2375,7 +2373,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-0ad979eb574b4e98ad3f9ea6c2f22b5b"></div>
+  <div id="jupyter-gosling-d8fdb393364e42d8ae754bf74b3c2c66"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2412,7 +2410,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2426,7 +2424,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-0ad979eb574b4e98ad3f9ea6c2f22b5b');
+    var el = document.getElementById('jupyter-gosling-d8fdb393364e42d8ae754bf74b3c2c66');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -2558,7 +2556,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-3d01600da288449eb455f3bcffaf84f3"></div>
+  <div id="jupyter-gosling-0a4806fa005643adab1bbc610cf6ec87"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2595,7 +2593,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2609,7 +2607,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-3d01600da288449eb455f3bcffaf84f3');
+    var el = document.getElementById('jupyter-gosling-0a4806fa005643adab1bbc610cf6ec87');
     var spec = {"tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#3DC491"}, "title": "InhibitoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -2645,7 +2643,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-0c861c7546364549bcbeb039167fbb82"></div>
+  <div id="jupyter-gosling-6627adf8385143eeb9e0e9c327c7736d"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2682,7 +2680,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2696,7 +2694,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-0c861c7546364549bcbeb039167fbb82');
+    var el = document.getElementById('jupyter-gosling-6627adf8385143eeb9e0e9c327c7736d');
     var spec = {"alignment": "stack", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#F29B67"}, "title": "ExcitatoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#3DC491"}, "title": "InhibitoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#565C8B"}, "title": "Microglia", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#77C0FA"}, "title": "Astrocytes", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "xDomain": {"chromosome": "3", "interval": [52168000, 52890000]}};
     var opt = {"padding": 0, "theme": null};
 
@@ -2728,7 +2726,7 @@ chr1  27600000  29900000  p35.3   gpos25
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-a70091e2706d45a6bd84d1c9c4aa7509"></div>
+  <div id="jupyter-gosling-673f7f46cb954184afae45efe54ea9f4"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -2765,7 +2763,7 @@ chr1  27600000  29900000  p35.3   gpos25
                 "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
                 "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
                 "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.16/dist/gosling.js",
+                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
             ];
 
             for (const src of sources) await loadScript(src);
@@ -2779,7 +2777,7 @@ chr1  27600000  29900000  p35.3   gpos25
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-a70091e2706d45a6bd84d1c9c4aa7509');
+    var el = document.getElementById('jupyter-gosling-673f7f46cb954184afae45efe54ea9f4');
     var spec = {"alignment": "stack", "tracks": [{"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/ExcitatoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#F29B67"}, "title": "ExcitatoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/InhibitoryNeurons-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#3DC491"}, "title": "InhibitoryNeurons", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/Microglia-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#565C8B"}, "title": "Microglia", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}, {"data": {"type": "bigwig", "url": "https://s3.amazonaws.com/gosling-lang.org/data/Astrocytes-insertions_bin100_RIPnorm.bw", "column": "position", "value": "peak"}, "height": 40, "mark": "bar", "width": 800, "color": {"value": "#77C0FA"}, "title": "Astrocytes", "x": {"field": "position", "type": "genomic"}, "y": {"axis": "right", "field": "peak", "type": "quantitative"}}], "layout": "circular"};
     var opt = {"padding": 0, "theme": null};
 
