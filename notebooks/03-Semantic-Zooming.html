@@ -535,19 +535,19 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gosling==0.0.9 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (0.0.9)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (1.4.3)
+Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (1.4.3)
 Requirement already satisfied: jsonschema&lt;4.0,&gt;=3.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (3.2.0)
 Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (3.1.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (0.18.1)
 Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (21.4.0)
-Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (0.18.1)
-Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (1.16.0)
 Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (58.1.0)
+Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (1.16.0)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jinja2-&gt;gosling==0.0.9) (2.1.1)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2022.1)
 Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (1.23.0)
 Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2022.1)
 </pre></div>
 </div>
 </div>
@@ -618,7 +618,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-6d1c941faab143ad93b5cbf0e6f98800"></div>
+  <div id="jupyter-gosling-46ba68d721c3442fbe06bb587c3174ee"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -669,7 +669,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-6d1c941faab143ad93b5cbf0e6f98800');
+    var el = document.getElementById('jupyter-gosling-46ba68d721c3442fbe06bb587c3174ee');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1", "interval": [80000000, 180000000]}};
     var opt = {"padding": 0, "theme": null};
 
@@ -724,7 +724,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-56762c497ca046dea93a92948eeb4dd2"></div>
+  <div id="jupyter-gosling-5edf534e848a43f6b9cdcc62b1366b33"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -775,7 +775,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-56762c497ca046dea93a92948eeb4dd2');
+    var el = document.getElementById('jupyter-gosling-5edf534e848a43f6b9cdcc62b1366b33');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 10}, "stroke": {"value": "black"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1", "interval": [80000000, 180000000]}};
     var opt = {"padding": 0, "theme": null};
 
@@ -808,7 +808,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-d0e3650f81a1457fb5080e52d2188382"></div>
+  <div id="jupyter-gosling-bbf3bc6a444441049fc4d185c67221c6"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -859,7 +859,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-d0e3650f81a1457fb5080e52d2188382');
+    var el = document.getElementById('jupyter-gosling-bbf3bc6a444441049fc4d185c67221c6');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 10}, "stroke": {"value": "black"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1"}};
     var opt = {"padding": 0, "theme": null};
 
@@ -910,7 +910,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-e393537b79384f1abf87eb23284055b3"></div>
+  <div id="jupyter-gosling-cfad56adaa754731960d9fcb63f31883"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -961,7 +961,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-e393537b79384f1abf87eb23284055b3');
+    var el = document.getElementById('jupyter-gosling-cfad56adaa754731960d9fcb63f31883');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 10}, "stroke": {"value": "black"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 4}], "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1"}};
     var opt = {"padding": 0, "theme": null};
 
@@ -1036,7 +1036,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-4f2fb5f5cf304ac4a7667b6a3fb2c665"></div>
+  <div id="jupyter-gosling-8523eed8584047869d8ceb3124cf036f"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1087,7 +1087,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-4f2fb5f5cf304ac4a7667b6a3fb2c665');
+    var el = document.getElementById('jupyter-gosling-8523eed8584047869d8ceb3124cf036f');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec", "row": "base", "column": "position", "value": "count", "categories": ["A", "T", "G", "C"]}, "mark": "bar", "color": {"domain": ["A", "T", "G", "C"], "field": "base", "legend": true, "type": "nominal"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "none", "field": "count", "type": "quantitative"}}, {"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec", "row": "base", "column": "position", "value": "count", "categories": ["A", "T", "G", "C"]}, "mark": "text", "color": {"value": "white"}, "dataTransform": [{"type": "filter", "field": "count", "oneOf": [0], "not": true}], "size": {"value": 24}, "text": {"field": "base", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}], "x": {"field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"interval": [1000000, 1000010]}};
     var opt = {"padding": 0, "theme": null};
 
@@ -1181,7 +1181,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-832528b0e2ac4a22a81a1ace933399ca"></div>
+  <div id="jupyter-gosling-c128cf742caa4451b3619f56108e8e4f"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1232,7 +1232,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-832528b0e2ac4a22a81a1ace933399ca');
+    var el = document.getElementById('jupyter-gosling-c128cf742caa4451b3619f56108e8e4f');
     var spec = {"tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "height": 200, "mark": "bar", "width": 800, "color": {"value": "lightgray"}, "dataTransform": [{"type": "filter", "field": "significance", "oneOf": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"]}], "opacity": {"value": 0.3}, "size": {"value": 1}, "stroke": {"value": "lightgray"}, "strokeWidth": {"value": 1}, "x": {"field": "start", "type": "genomic"}, "y": {"baseline": "Uncertain_significance", "domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": [214.28571428571428, 14.285714285714286], "type": "nominal"}, "ye": {"value": 100.0}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1273,7 +1273,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-8cec6974212c44cfbb84961c372e8e8a"></div>
+  <div id="jupyter-gosling-d2ee5df35bf84e4da1332865aa9d2fd2"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1324,7 +1324,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-8cec6974212c44cfbb84961c372e8e8a');
+    var el = document.getElementById('jupyter-gosling-d2ee5df35bf84e4da1332865aa9d2fd2');
     var spec = {"tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "height": 200, "mark": "point", "width": 800, "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "opacity": {"value": 0.8}, "row": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "type": "nominal"}, "size": {"value": 7}, "x": {"field": "start", "type": "genomic"}}]};
     var opt = {"padding": 0, "theme": null};
 
@@ -1357,7 +1357,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-e333fe75495d444bb8d20f4a3fa0459d"></div>
+  <div id="jupyter-gosling-d55d213b3b304087bb7ad0218b7679c4"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1408,7 +1408,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-e333fe75495d444bb8d20f4a3fa0459d');
+    var el = document.getElementById('jupyter-gosling-d55d213b3b304087bb7ad0218b7679c4');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "bar", "color": {"value": "lightgray"}, "dataTransform": [{"type": "filter", "field": "significance", "oneOf": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"]}], "opacity": {"value": 0.3}, "size": {"value": 1}, "stroke": {"value": "lightgray"}, "strokeWidth": {"value": 1}, "x": {"field": "start", "type": "genomic"}, "y": {"baseline": "Uncertain_significance", "domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": [214.28571428571428, 14.285714285714286], "type": "nominal"}, "ye": {"value": 100.0}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "point", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "opacity": {"value": 0.8}, "row": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "type": "nominal"}, "size": {"value": 7}, "x": {"field": "start", "type": "genomic"}}], "width": 800, "height": 200};
     var opt = {"padding": 0, "theme": null};
 
@@ -1460,7 +1460,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-550e5cfccbed4ba98f908f7589c8fdaa"></div>
+  <div id="jupyter-gosling-de6ef02edf584f039af9ba0113e27747"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1511,7 +1511,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-550e5cfccbed4ba98f908f7589c8fdaa');
+    var el = document.getElementById('jupyter-gosling-de6ef02edf584f039af9ba0113e27747');
     var spec = {"tracks": [{"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-multivec", "row": "significance", "column": "position", "value": "count", "categories": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "binSize": 4}, "height": 180, "mark": "bar", "width": 800, "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "legend": true, "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "x": {"field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}, "y": {"axis": "none", "field": "count", "type": "quantitative"}}], "xDomain": {"chromosome": "chr17"}};
     var opt = {"padding": 0, "theme": null};
 
@@ -1575,7 +1575,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-39988dad31394b4480f3b2cf159ba2b2"></div>
+  <div id="jupyter-gosling-d0a3122e7c324ef6a7e4d9e1bf1a7020"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1626,7 +1626,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-39988dad31394b4480f3b2cf159ba2b2');
+    var el = document.getElementById('jupyter-gosling-d0a3122e7c324ef6a7e4d9e1bf1a7020');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "bar", "color": {"value": "lightgray"}, "dataTransform": [{"type": "filter", "field": "significance", "oneOf": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"]}], "opacity": {"value": 0.3}, "size": {"value": 1}, "stroke": {"value": "lightgray"}, "strokeWidth": {"value": 1}, "x": {"field": "start", "type": "genomic"}, "y": {"baseline": "Uncertain_significance", "domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": [214.28571428571428, 14.285714285714286], "type": "nominal"}, "ye": {"value": 100.0}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "point", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "opacity": {"value": 0.8}, "row": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "type": "nominal"}, "size": {"value": 7}, "x": {"field": "start", "type": "genomic"}}, {"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-multivec", "row": "significance", "column": "position", "value": "count", "categories": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "binSize": 4}, "mark": "bar", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "legend": true, "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "x": {"field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}, "y": {"axis": "none", "field": "count", "type": "quantitative"}}], "width": 800, "height": 200, "xDomain": {"chromosome": "17"}};
     var opt = {"padding": 0, "theme": null};
 
@@ -1669,7 +1669,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-f0aa11a9267b4971ba45f135ebc3179e"></div>
+  <div id="jupyter-gosling-567c4a69ca6b4fa0a946e6a5383f307e"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -1720,7 +1720,7 @@ Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-f0aa11a9267b4971ba45f135ebc3179e');
+    var el = document.getElementById('jupyter-gosling-567c4a69ca6b4fa0a946e6a5383f307e');
     var spec = {"alignment": "stack", "tracks": [{"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "bar", "color": {"value": "lightgray"}, "dataTransform": [{"type": "filter", "field": "significance", "oneOf": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"]}], "opacity": {"value": 0.3}, "size": {"value": 1}, "stroke": {"value": "lightgray"}, "strokeWidth": {"value": 1}, "x": {"field": "start", "type": "genomic"}, "y": {"baseline": "Uncertain_significance", "domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": [214.28571428571428, 14.285714285714286], "type": "nominal"}, "ye": {"value": 100.0}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "point", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "opacity": {"value": 0.8}, "row": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "type": "nominal"}, "size": {"value": 7}, "x": {"field": "start", "type": "genomic"}}, {"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-multivec", "row": "significance", "column": "position", "value": "count", "categories": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "binSize": 4}, "mark": "bar", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "legend": true, "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "x": {"field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}, "y": {"axis": "none", "field": "count", "type": "quantitative"}}], "width": 800, "height": 200}], "id": "view1", "xDomain": {"chromosome": "13", "interval": [31500000, 33150000]}};
     var opt = {"padding": 0, "theme": null};
 
