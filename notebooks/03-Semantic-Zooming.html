@@ -356,11 +356,6 @@ title="Print to PDF"
        (3) Combined semantic zoom track
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#final-visualization">
-       Final visualization
-      </a>
-     </li>
     </ul>
    </li>
   </ul>
@@ -442,11 +437,6 @@ title="Print to PDF"
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#combined-semantic-zoom-track">
        (3) Combined semantic zoom track
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#final-visualization">
-       Final visualization
       </a>
      </li>
     </ul>
@@ -535,19 +525,17 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gosling==0.0.9 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (0.0.9)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: jsonschema&lt;4.0,&gt;=3.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (3.2.0)
 Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (1.4.3)
 Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (3.1.2)
-Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (21.4.0)
-Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (58.1.0)
+Requirement already satisfied: jsonschema&lt;4.0,&gt;=3.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from gosling==0.0.9) (3.2.0)
 Requirement already satisfied: six&gt;=1.11.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (1.16.0)
+Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (58.1.0)
 Requirement already satisfied: pyrsistent&gt;=0.14.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (0.18.1)
+Requirement already satisfied: attrs&gt;=17.4.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jsonschema&lt;4.0,&gt;=3.0-&gt;gosling==0.0.9) (21.4.0)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from jinja2-&gt;gosling==0.0.9) (2.1.1)
-Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2022.1)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2.8.2)
 Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (1.23.0)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2.8.2)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages (from pandas-&gt;gosling==0.0.9) (2022.1)
 </pre></div>
 </div>
 </div>
@@ -618,7 +606,7 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-ab0d237e044544bb92db02bb32a3482d"></div>
+  <div id="jupyter-gosling-75996cfbd3794247bb6dde2676b4c5f3"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -669,7 +657,7 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-ab0d237e044544bb92db02bb32a3482d');
+    var el = document.getElementById('jupyter-gosling-75996cfbd3794247bb6dde2676b4c5f3');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1", "interval": [80000000, 180000000]}};
     var opt = {"padding": 0, "theme": null};
 
@@ -724,7 +712,7 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-45e8e3327bdc4f9085ac61f23b38910b"></div>
+  <div id="jupyter-gosling-df453eb0297549b2b95742aa629f683f"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -775,7 +763,7 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-45e8e3327bdc4f9085ac61f23b38910b');
+    var el = document.getElementById('jupyter-gosling-df453eb0297549b2b95742aa629f683f');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 10}, "stroke": {"value": "black"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1", "interval": [80000000, 180000000]}};
     var opt = {"padding": 0, "theme": null};
 
@@ -808,7 +796,7 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-b49dad4b6ffe47b1b06927d52a0f7a64"></div>
+  <div id="jupyter-gosling-ef61637ec59149b585d94b0cf976669d"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -859,7 +847,7 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-b49dad4b6ffe47b1b06927d52a0f7a64');
+    var el = document.getElementById('jupyter-gosling-ef61637ec59149b585d94b0cf976669d');
     var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 10}, "stroke": {"value": "black"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1"}};
     var opt = {"padding": 0, "theme": null};
 
@@ -886,8 +874,8 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
 <span class="n">arm_labels</span> <span class="o">=</span> <span class="n">arm_labels</span><span class="o">.</span><span class="n">visibility_lt</span><span class="p">(</span>
     <span class="n">target</span><span class="o">=</span><span class="s1">&#39;mark&#39;</span><span class="p">,</span> <span class="c1"># control visibility of `mark` or entire `track`?</span>
     <span class="n">measure</span><span class="o">=</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="c1"># measurement to compare with threshold</span>
-    <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;|xe-x|&#39;</span><span class="p">,</span> <span class="c1"># this option uses the actual width of a text label</span>
-    <span class="n">transitionPadding</span><span class="o">=</span><span class="mi">4</span> <span class="c1"># padding in px to enable smooth transition using transparency</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;|xe-x|&#39;</span><span class="p">,</span> <span class="c1"># this refers to the assigned width of a text label (i.e., same as the size of `rect`) </span>
+    <span class="c1"># transitionPadding=4 # padding in px to enable smooth transition using transparency</span>
 <span class="p">)</span>
 
 <span class="n">ideogram</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span>
@@ -910,7 +898,7 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
   <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
 </head>
 <body>
-  <div id="jupyter-gosling-06f77b87a5e24ecea4d45c37c84fe3f8"></div>
+  <div id="jupyter-gosling-5661d530566d4510b6527495608b5e55"></div>
   <script type="module">
 
     async function loadScript(src) {
@@ -961,8 +949,8 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
         return window.gosling;
     };
 
-    var el = document.getElementById('jupyter-gosling-06f77b87a5e24ecea4d45c37c84fe3f8');
-    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 10}, "stroke": {"value": "black"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 4}], "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1"}};
+    var el = document.getElementById('jupyter-gosling-5661d530566d4510b6527495608b5e55');
+    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "rect", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["white", "#D9D9D9", "#979797", "#636363", "black", "#A0A0F2"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 20}, "stroke": {"value": "gray"}, "strokeWidth": {"value": 0.5}, "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "text", "color": {"domain": ["gneg", "gpos25", "gpos50", "gpos75", "gpos100", "gvar"], "field": "stain", "range": ["black", "#636363", "black", "#D9D9D9", "white", "black"], "type": "nominal"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"], "not": true}], "size": {"value": 10}, "stroke": {"value": "black"}, "strokeWidth": {"value": 0}, "text": {"field": "name", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|"}], "x": {"axis": "top", "field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleLeft", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "p"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}, {"data": {"type": "csv", "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.bed", "headerNames": ["chrom", "chromStart", "chromEnd", "name", "stain"], "chromosomeField": "chrom", "genomicFields": ["chromStart", "chromEnd"], "separator": "\t"}, "mark": "triangleRight", "color": {"value": "red"}, "dataTransform": [{"type": "filter", "field": "stain", "oneOf": ["acen"]}, {"type": "filter", "field": "name", "include": "q"}], "size": {"value": 20}, "x": {"field": "chromStart", "type": "genomic"}, "xe": {"field": "chromEnd", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"chromosome": "chr1"}};
     var opt = {"padding": 0, "theme": null};
 
     loadGosling()
@@ -1013,10 +1001,10 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
 <span class="c1"># determines visibility of the text labels</span>
 <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">visibility_lt</span><span class="p">(</span>
     <span class="c1"># add here</span>
-    <span class="n">target</span><span class="o">=</span><span class="s2">&quot;mark&quot;</span><span class="p">,</span>
-    <span class="n">measure</span><span class="o">=</span><span class="s2">&quot;width&quot;</span><span class="p">,</span>
-    <span class="n">threshold</span><span class="o">=</span><span class="s2">&quot;|xe-x|&quot;</span><span class="p">,</span>
-    <span class="n">transitionPadding</span><span class="o">=</span><span class="mi">10</span>
+    <span class="c1"># target=?,</span>
+    <span class="c1"># measure=?,</span>
+    <span class="c1"># threshold=?,</span>
+    <span class="c1"># transitionPadding=?</span>
 <span class="p">)</span>
 
 <span class="n">sequence</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
@@ -1028,81 +1016,59 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-<!DOCTYPE html>
-<html>
-<head>
-  <style>.error { color: red; }</style>
-  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
-</head>
-<body>
-  <div id="jupyter-gosling-c5c958333769478d8cce6a13fb7f0728"></div>
-  <script type="module">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">SchemaValidationError</span><span class="g g-Whitespace">                     </span>Traceback (most recent call last)
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 25&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">text</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">Track</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">mark_text</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">x</span><span class="o">=</span><span class="s2">&quot;start:G&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">xe</span><span class="o">=</span><span class="s2">&quot;end:G&quot;</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">text</span><span class="o">=</span><span class="s2">&quot;base:N&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="p">)</span><span class="o">.</span><span class="n">transform_filter_not</span><span class="p">(</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">oneOf</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="c1"># Exercise: Uncomment the following lines and fill in the properties</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="c1"># determines visibility of the text labels</span>
+<span class="ne">---&gt; </span><span class="mi">25</span> <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">visibility_lt</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="c1"># add here</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="c1"># target=?,</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="c1"># measure=?,</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="c1"># threshold=?,</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="c1"># transitionPadding=?</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span> <span class="n">sequence</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span><span class="n">bar</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="n">xDomain</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">GenomicDomain</span><span class="p">(</span><span class="n">interval</span><span class="o">=</span><span class="p">[</span><span class="mi">1000000</span><span class="p">,</span> <span class="mi">1000010</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span> <span class="n">sequence</span>
 
-    async function loadScript(src) {
-        return new Promise(resolve => {
-            const script = document.createElement('script');
-            script.onload = resolve;
-            script.src = src;
-            script.async = false;
-            document.head.appendChild(script);
-        });
-    }
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/gosling/api.py:162,</span> in <span class="ni">_VisibilityMixin.visibility_lt</span><span class="nt">(self, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span> <span class="nd">@utils</span><span class="o">.</span><span class="n">use_signature</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">VisibilityCondition</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span> <span class="k">def</span> <span class="nf">visibility_lt</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="sd">&quot;&quot;&quot;Add less-than VisibilityCondition to Track&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">162</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_visibility</span><span class="p">(</span><span class="n">core</span><span class="o">.</span><span class="n">VisibilityCondition</span><span class="p">(</span><span class="n">operation</span><span class="o">=</span><span class="s2">&quot;LT&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
 
-    async function loadGosling() {
-        // Manually load scripts from window namespace since requirejs might not be
-        // available in all browser environments.
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/gosling/schema/core.py:2564,</span> in <span class="ni">VisibilityCondition.__init__</span><span class="nt">(self, *args, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2563</span> <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">2564</span>     <span class="nb">super</span><span class="p">(</span><span class="n">VisibilityCondition</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
-        // https://github.com/DanielHreben/requirejs-toggle
-        if (!window.gosling) {
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/gosling/schemapi.py:176,</span> in <span class="ni">SchemaBase.__init__</span><span class="nt">(self, *args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_kwds&quot;</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span> <span class="k">if</span> <span class="n">DEBUG_MODE</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_class_is_valid_at_instantiation</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>     <span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-            // https://github.com/DanielHreben/requirejs-toggle
-            window.__requirejsToggleBackup = {
-                define: window.define,
-                require: window.require,
-                requirejs: window.requirejs,
-            };
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.5/x64/lib/python3.10/site-packages/gosling/schemapi.py:339,</span> in <span class="ni">SchemaBase.to_dict</span><span class="nt">(self, validate, ignore, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">337</span>         <span class="bp">self</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">338</span>     <span class="k">except</span> <span class="n">jsonschema</span><span class="o">.</span><span class="n">ValidationError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">339</span>         <span class="k">raise</span> <span class="n">SchemaValidationError</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span> <span class="k">return</span> <span class="n">result</span>
 
-            for (const field of Object.keys(window.__requirejsToggleBackup)) {
-                window[field] = undefined;
-            }
+<span class="ne">SchemaValidationError</span>: Invalid specification
 
-            // load dependencies sequentially
-            const sources = [
-                "https://unpkg.com/react@17/umd/react.production.min.js",
-                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
-                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
-                "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
-            ];
+        <span class="n">gosling</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">VisibilityCondition</span><span class="o">-&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="n">validating</span> <span class="s1">&#39;required&#39;</span>
 
-            for (const src of sources) await loadScript(src);
-
-            // restore requirejs after scripts have loaded
-            Object.assign(window, window.__requirejsToggleBackup);
-            delete window.__requirejsToggleBackup;
-
-        }
-
-        return window.gosling;
-    };
-
-    var el = document.getElementById('jupyter-gosling-c5c958333769478d8cce6a13fb7f0728');
-    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec", "row": "base", "column": "position", "value": "count", "categories": ["A", "T", "G", "C"]}, "mark": "bar", "color": {"domain": ["A", "T", "G", "C"], "field": "base", "legend": true, "type": "nominal"}, "x": {"field": "position", "type": "genomic"}, "y": {"axis": "none", "field": "count", "type": "quantitative"}}, {"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec", "row": "base", "column": "position", "value": "count", "categories": ["A", "T", "G", "C"]}, "mark": "text", "color": {"value": "white"}, "dataTransform": [{"type": "filter", "field": "count", "oneOf": [0], "not": true}], "size": {"value": 24}, "text": {"field": "base", "type": "nominal"}, "visibility": [{"operation": "LT", "target": "mark", "measure": "width", "threshold": "|xe-x|", "transitionPadding": 10}], "x": {"field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}}], "width": 800, "height": 180, "xDomain": {"interval": [1000000, 1000010]}};
-    var opt = {"padding": 0, "theme": null};
-
-    loadGosling()
-        .then(gosling => gosling.embed(el, spec, opt))
-        .catch(err => {
-            el.innerHTML = `<div class="error">
-    <p>JavaScript Error: ${error.message}</p>
-    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
-</div>`;
-            throw error;
-        });
-  </script>
-</body>
-</html></div></div>
+        <span class="s1">&#39;measure&#39;</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">required</span> <span class="nb">property</span>
+        
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="exercise-3-scalable-variant-track">
@@ -1172,82 +1138,6 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<!DOCTYPE html>
-<html>
-<head>
-  <style>.error { color: red; }</style>
-  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
-</head>
-<body>
-  <div id="jupyter-gosling-82a8ad6ccc304cd3ad29566e7f55a561"></div>
-  <script type="module">
-
-    async function loadScript(src) {
-        return new Promise(resolve => {
-            const script = document.createElement('script');
-            script.onload = resolve;
-            script.src = src;
-            script.async = false;
-            document.head.appendChild(script);
-        });
-    }
-
-    async function loadGosling() {
-        // Manually load scripts from window namespace since requirejs might not be
-        // available in all browser environments.
-
-        // https://github.com/DanielHreben/requirejs-toggle
-        if (!window.gosling) {
-
-            // https://github.com/DanielHreben/requirejs-toggle
-            window.__requirejsToggleBackup = {
-                define: window.define,
-                require: window.require,
-                requirejs: window.requirejs,
-            };
-
-            for (const field of Object.keys(window.__requirejsToggleBackup)) {
-                window[field] = undefined;
-            }
-
-            // load dependencies sequentially
-            const sources = [
-                "https://unpkg.com/react@17/umd/react.production.min.js",
-                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
-                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
-                "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
-            ];
-
-            for (const src of sources) await loadScript(src);
-
-            // restore requirejs after scripts have loaded
-            Object.assign(window, window.__requirejsToggleBackup);
-            delete window.__requirejsToggleBackup;
-
-        }
-
-        return window.gosling;
-    };
-
-    var el = document.getElementById('jupyter-gosling-82a8ad6ccc304cd3ad29566e7f55a561');
-    var spec = {"tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "height": 200, "mark": "bar", "width": 800, "color": {"value": "lightgray"}, "dataTransform": [{"type": "filter", "field": "significance", "oneOf": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"]}], "opacity": {"value": 0.3}, "size": {"value": 1}, "stroke": {"value": "lightgray"}, "strokeWidth": {"value": 1}, "x": {"field": "start", "type": "genomic"}, "y": {"baseline": "Uncertain_significance", "domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": [214.28571428571428, 14.285714285714286], "type": "nominal"}, "ye": {"value": 100.0}}]};
-    var opt = {"padding": 0, "theme": null};
-
-    loadGosling()
-        .then(gosling => gosling.embed(el, spec, opt))
-        .catch(err => {
-            el.innerHTML = `<div class="error">
-    <p>JavaScript Error: ${error.message}</p>
-    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
-</div>`;
-            throw error;
-        });
-  </script>
-</body>
-</html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1264,82 +1154,6 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<!DOCTYPE html>
-<html>
-<head>
-  <style>.error { color: red; }</style>
-  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
-</head>
-<body>
-  <div id="jupyter-gosling-f897de4543b64d4b89062946774ae084"></div>
-  <script type="module">
-
-    async function loadScript(src) {
-        return new Promise(resolve => {
-            const script = document.createElement('script');
-            script.onload = resolve;
-            script.src = src;
-            script.async = false;
-            document.head.appendChild(script);
-        });
-    }
-
-    async function loadGosling() {
-        // Manually load scripts from window namespace since requirejs might not be
-        // available in all browser environments.
-
-        // https://github.com/DanielHreben/requirejs-toggle
-        if (!window.gosling) {
-
-            // https://github.com/DanielHreben/requirejs-toggle
-            window.__requirejsToggleBackup = {
-                define: window.define,
-                require: window.require,
-                requirejs: window.requirejs,
-            };
-
-            for (const field of Object.keys(window.__requirejsToggleBackup)) {
-                window[field] = undefined;
-            }
-
-            // load dependencies sequentially
-            const sources = [
-                "https://unpkg.com/react@17/umd/react.production.min.js",
-                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
-                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
-                "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
-            ];
-
-            for (const src of sources) await loadScript(src);
-
-            // restore requirejs after scripts have loaded
-            Object.assign(window, window.__requirejsToggleBackup);
-            delete window.__requirejsToggleBackup;
-
-        }
-
-        return window.gosling;
-    };
-
-    var el = document.getElementById('jupyter-gosling-f897de4543b64d4b89062946774ae084');
-    var spec = {"tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "height": 200, "mark": "point", "width": 800, "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "opacity": {"value": 0.8}, "row": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "type": "nominal"}, "size": {"value": 7}, "x": {"field": "start", "type": "genomic"}}]};
-    var opt = {"padding": 0, "theme": null};
-
-    loadGosling()
-        .then(gosling => gosling.embed(el, spec, opt))
-        .catch(err => {
-            el.innerHTML = `<div class="error">
-    <p>JavaScript Error: ${error.message}</p>
-    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
-</div>`;
-            throw error;
-        });
-  </script>
-</body>
-</html></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1348,82 +1162,6 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<!DOCTYPE html>
-<html>
-<head>
-  <style>.error { color: red; }</style>
-  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
-</head>
-<body>
-  <div id="jupyter-gosling-9588fd546e9b44ba92c0b5d4626fb503"></div>
-  <script type="module">
-
-    async function loadScript(src) {
-        return new Promise(resolve => {
-            const script = document.createElement('script');
-            script.onload = resolve;
-            script.src = src;
-            script.async = false;
-            document.head.appendChild(script);
-        });
-    }
-
-    async function loadGosling() {
-        // Manually load scripts from window namespace since requirejs might not be
-        // available in all browser environments.
-
-        // https://github.com/DanielHreben/requirejs-toggle
-        if (!window.gosling) {
-
-            // https://github.com/DanielHreben/requirejs-toggle
-            window.__requirejsToggleBackup = {
-                define: window.define,
-                require: window.require,
-                requirejs: window.requirejs,
-            };
-
-            for (const field of Object.keys(window.__requirejsToggleBackup)) {
-                window[field] = undefined;
-            }
-
-            // load dependencies sequentially
-            const sources = [
-                "https://unpkg.com/react@17/umd/react.production.min.js",
-                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
-                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
-                "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
-            ];
-
-            for (const src of sources) await loadScript(src);
-
-            // restore requirejs after scripts have loaded
-            Object.assign(window, window.__requirejsToggleBackup);
-            delete window.__requirejsToggleBackup;
-
-        }
-
-        return window.gosling;
-    };
-
-    var el = document.getElementById('jupyter-gosling-9588fd546e9b44ba92c0b5d4626fb503');
-    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "bar", "color": {"value": "lightgray"}, "dataTransform": [{"type": "filter", "field": "significance", "oneOf": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"]}], "opacity": {"value": 0.3}, "size": {"value": 1}, "stroke": {"value": "lightgray"}, "strokeWidth": {"value": 1}, "x": {"field": "start", "type": "genomic"}, "y": {"baseline": "Uncertain_significance", "domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": [214.28571428571428, 14.285714285714286], "type": "nominal"}, "ye": {"value": 100.0}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "point", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "opacity": {"value": 0.8}, "row": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "type": "nominal"}, "size": {"value": 7}, "x": {"field": "start", "type": "genomic"}}], "width": 800, "height": 200};
-    var opt = {"padding": 0, "theme": null};
-
-    loadGosling()
-        .then(gosling => gosling.embed(el, spec, opt))
-        .catch(err => {
-            el.innerHTML = `<div class="error">
-    <p>JavaScript Error: ${error.message}</p>
-    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
-</div>`;
-            throw error;
-        });
-  </script>
-</body>
-</html></div></div>
 </div>
 </section>
 <section id="density-representation-of-variant-classifications">
@@ -1451,82 +1189,6 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<!DOCTYPE html>
-<html>
-<head>
-  <style>.error { color: red; }</style>
-  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
-</head>
-<body>
-  <div id="jupyter-gosling-09c0c6b735ec4776ab9c1450ee20e126"></div>
-  <script type="module">
-
-    async function loadScript(src) {
-        return new Promise(resolve => {
-            const script = document.createElement('script');
-            script.onload = resolve;
-            script.src = src;
-            script.async = false;
-            document.head.appendChild(script);
-        });
-    }
-
-    async function loadGosling() {
-        // Manually load scripts from window namespace since requirejs might not be
-        // available in all browser environments.
-
-        // https://github.com/DanielHreben/requirejs-toggle
-        if (!window.gosling) {
-
-            // https://github.com/DanielHreben/requirejs-toggle
-            window.__requirejsToggleBackup = {
-                define: window.define,
-                require: window.require,
-                requirejs: window.requirejs,
-            };
-
-            for (const field of Object.keys(window.__requirejsToggleBackup)) {
-                window[field] = undefined;
-            }
-
-            // load dependencies sequentially
-            const sources = [
-                "https://unpkg.com/react@17/umd/react.production.min.js",
-                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
-                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
-                "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
-            ];
-
-            for (const src of sources) await loadScript(src);
-
-            // restore requirejs after scripts have loaded
-            Object.assign(window, window.__requirejsToggleBackup);
-            delete window.__requirejsToggleBackup;
-
-        }
-
-        return window.gosling;
-    };
-
-    var el = document.getElementById('jupyter-gosling-09c0c6b735ec4776ab9c1450ee20e126');
-    var spec = {"tracks": [{"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-multivec", "row": "significance", "column": "position", "value": "count", "categories": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "binSize": 4}, "height": 180, "mark": "bar", "width": 800, "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "legend": true, "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "x": {"field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}, "y": {"axis": "none", "field": "count", "type": "quantitative"}}], "xDomain": {"chromosome": "chr17"}};
-    var opt = {"padding": 0, "theme": null};
-
-    loadGosling()
-        .then(gosling => gosling.embed(el, spec, opt))
-        .catch(err => {
-            el.innerHTML = `<div class="error">
-    <p>JavaScript Error: ${error.message}</p>
-    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
-</div>`;
-            throw error;
-        });
-  </script>
-</body>
-</html></div></div>
 </div>
 </section>
 <section id="combined-semantic-zoom-track">
@@ -1566,176 +1228,6 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /opt/hostedtoolcache/Python/3
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<!DOCTYPE html>
-<html>
-<head>
-  <style>.error { color: red; }</style>
-  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
-</head>
-<body>
-  <div id="jupyter-gosling-fd516a422ce44317a4f8c6216581cf65"></div>
-  <script type="module">
-
-    async function loadScript(src) {
-        return new Promise(resolve => {
-            const script = document.createElement('script');
-            script.onload = resolve;
-            script.src = src;
-            script.async = false;
-            document.head.appendChild(script);
-        });
-    }
-
-    async function loadGosling() {
-        // Manually load scripts from window namespace since requirejs might not be
-        // available in all browser environments.
-
-        // https://github.com/DanielHreben/requirejs-toggle
-        if (!window.gosling) {
-
-            // https://github.com/DanielHreben/requirejs-toggle
-            window.__requirejsToggleBackup = {
-                define: window.define,
-                require: window.require,
-                requirejs: window.requirejs,
-            };
-
-            for (const field of Object.keys(window.__requirejsToggleBackup)) {
-                window[field] = undefined;
-            }
-
-            // load dependencies sequentially
-            const sources = [
-                "https://unpkg.com/react@17/umd/react.production.min.js",
-                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
-                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
-                "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
-            ];
-
-            for (const src of sources) await loadScript(src);
-
-            // restore requirejs after scripts have loaded
-            Object.assign(window, window.__requirejsToggleBackup);
-            delete window.__requirejsToggleBackup;
-
-        }
-
-        return window.gosling;
-    };
-
-    var el = document.getElementById('jupyter-gosling-fd516a422ce44317a4f8c6216581cf65');
-    var spec = {"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "bar", "color": {"value": "lightgray"}, "dataTransform": [{"type": "filter", "field": "significance", "oneOf": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"]}], "opacity": {"value": 0.3}, "size": {"value": 1}, "stroke": {"value": "lightgray"}, "strokeWidth": {"value": 1}, "x": {"field": "start", "type": "genomic"}, "y": {"baseline": "Uncertain_significance", "domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": [214.28571428571428, 14.285714285714286], "type": "nominal"}, "ye": {"value": 100.0}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "point", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "opacity": {"value": 0.8}, "row": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "type": "nominal"}, "size": {"value": 7}, "x": {"field": "start", "type": "genomic"}}, {"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-multivec", "row": "significance", "column": "position", "value": "count", "categories": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "binSize": 4}, "mark": "bar", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "legend": true, "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "x": {"field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}, "y": {"axis": "none", "field": "count", "type": "quantitative"}}], "width": 800, "height": 200, "xDomain": {"chromosome": "17"}};
-    var opt = {"padding": 0, "theme": null};
-
-    loadGosling()
-        .then(gosling => gosling.embed(el, spec, opt))
-        .catch(err => {
-            el.innerHTML = `<div class="error">
-    <p>JavaScript Error: ${error.message}</p>
-    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
-</div>`;
-            throw error;
-        });
-  </script>
-</body>
-</html></div></div>
-</div>
-</section>
-<section id="final-visualization">
-<h4>Final visualization<a class="headerlink" href="#final-visualization" title="Permalink to this headline">#</a></h4>
-<p>Finally we can add the gene annotation track with our custom lolipop visualization for the final exploratory viewer.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">gos</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span>
-    <span class="n">lolipop</span><span class="p">,</span>
-<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
-    <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;view1&quot;</span><span class="p">,</span>
-    <span class="n">xDomain</span><span class="o">=</span><span class="n">gos</span><span class="o">.</span><span class="n">GenomicDomain</span><span class="p">(</span><span class="n">chromosome</span><span class="o">=</span><span class="s2">&quot;13&quot;</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="p">[</span><span class="mi">31500000</span><span class="p">,</span> <span class="mi">33150000</span><span class="p">]),</span>
-<span class="p">)</span>
-
-<span class="n">view</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html">
-<!DOCTYPE html>
-<html>
-<head>
-  <style>.error { color: red; }</style>
-  <link rel="stylesheet" href="https://unpkg.com/higlass@1.11/dist/hglib.css">
-</head>
-<body>
-  <div id="jupyter-gosling-1418a8dbd0ad4ec1be487aa0cc80a6d9"></div>
-  <script type="module">
-
-    async function loadScript(src) {
-        return new Promise(resolve => {
-            const script = document.createElement('script');
-            script.onload = resolve;
-            script.src = src;
-            script.async = false;
-            document.head.appendChild(script);
-        });
-    }
-
-    async function loadGosling() {
-        // Manually load scripts from window namespace since requirejs might not be
-        // available in all browser environments.
-
-        // https://github.com/DanielHreben/requirejs-toggle
-        if (!window.gosling) {
-
-            // https://github.com/DanielHreben/requirejs-toggle
-            window.__requirejsToggleBackup = {
-                define: window.define,
-                require: window.require,
-                requirejs: window.requirejs,
-            };
-
-            for (const field of Object.keys(window.__requirejsToggleBackup)) {
-                window[field] = undefined;
-            }
-
-            // load dependencies sequentially
-            const sources = [
-                "https://unpkg.com/react@17/umd/react.production.min.js",
-                "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
-                "https://unpkg.com/pixi.js@6/dist/browser/pixi.min.js",
-                "https://unpkg.com/higlass@1.11/dist/hglib.js",
-                "https://unpkg.com/gosling.js@0.9.20/dist/gosling.js",
-            ];
-
-            for (const src of sources) await loadScript(src);
-
-            // restore requirejs after scripts have loaded
-            Object.assign(window, window.__requirejsToggleBackup);
-            delete window.__requirejsToggleBackup;
-
-        }
-
-        return window.gosling;
-    };
-
-    var el = document.getElementById('jupyter-gosling-1418a8dbd0ad4ec1be487aa0cc80a6d9');
-    var spec = {"alignment": "stack", "tracks": [{"alignment": "overlay", "tracks": [{"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "bar", "color": {"value": "lightgray"}, "dataTransform": [{"type": "filter", "field": "significance", "oneOf": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"]}], "opacity": {"value": 0.3}, "size": {"value": 1}, "stroke": {"value": "lightgray"}, "strokeWidth": {"value": 1}, "x": {"field": "start", "type": "genomic"}, "y": {"baseline": "Uncertain_significance", "domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": [214.28571428571428, 14.285714285714286], "type": "nominal"}, "ye": {"value": 100.0}}, {"data": {"type": "beddb", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-beddb", "genomicFields": [{"index": 1, "name": "start"}, {"index": 2, "name": "end"}], "valueFields": [{"index": 7, "name": "significance", "type": "nominal"}]}, "mark": "point", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "opacity": {"value": 0.8}, "row": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "type": "nominal"}, "size": {"value": 7}, "x": {"field": "start", "type": "genomic"}}, {"data": {"type": "multivec", "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=clinvar-multivec", "row": "significance", "column": "position", "value": "count", "categories": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "binSize": 4}, "mark": "bar", "color": {"domain": ["Benign", "Benign/Likely_benign", "Likely_benign", "Uncertain_significance", "Likely_pathogenic", "Pathogenic/Likely_pathogenic", "Pathogenic"], "field": "significance", "legend": true, "range": ["#5A9F8C", "#5A9F8C", "#029F73", "gray", "#CB96B3", "#CB71A3", "#CB3B8C"], "type": "nominal"}, "x": {"field": "start", "type": "genomic"}, "xe": {"field": "end", "type": "genomic"}, "y": {"axis": "none", "field": "count", "type": "quantitative"}}], "width": 800, "height": 200}], "id": "view1", "xDomain": {"chromosome": "13", "interval": [31500000, 33150000]}};
-    var opt = {"padding": 0, "theme": null};
-
-    loadGosling()
-        .then(gosling => gosling.embed(el, spec, opt))
-        .catch(err => {
-            el.innerHTML = `<div class="error">
-    <p>JavaScript Error: ${error.message}</p>
-    <p>This usually means there's a typo in your Gosling specification. See the javascript console for the full traceback.</p>
-</div>`;
-            throw error;
-        });
-  </script>
-</body>
-</html></div></div>
 </div>
 </section>
 </section>
